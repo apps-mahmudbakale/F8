@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Camera, Award, Truck, Users, Instagram, Mail, ArrowRight, Check, Star, Globe } from 'lucide-react';
+import { Camera, Award, Truck, Users, Instagram, Mail, ArrowRight, Check, Star, Globe, MessageCircle, Phone } from 'lucide-react';
 
 function App() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showWhatsApp, setShowWhatsApp] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
+    const handleShowWhatsApp = () => setShowWhatsApp(window.scrollY > 300);
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleShowWhatsApp);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleShowWhatsApp);
+    };
   }, []);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
@@ -23,6 +31,14 @@ function App() {
     }
   };
 
+  const whatsappNumber = "+2348123456789"; // Replace with actual WhatsApp number
+  const whatsappMessage = "Hi! I'm interested in F8 Media Arts limited edition pieces. Can you tell me more about the collection?";
+  
+  const openWhatsApp = (customMessage?: string) => {
+    const message = customMessage || whatsappMessage;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* Navigation */}
@@ -202,26 +218,67 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Collection Preview</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Get a glimpse of what's coming. Official collection goes live soon.
+              Discover our curated selection of limited-edition pieces. Each artwork tells a unique story.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {[
               {
                 image: "https://images.pexels.com/photos/1579708/pexels-photo-1579708.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
                 title: "Urban Reflections",
-                editions: "3/3 Available"
+                editions: "3/3 Available",
+                price: "₦85,000",
+                size: "16x20 inches"
               },
               {
                 image: "https://images.pexels.com/photos/1070346/pexels-photo-1070346.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
                 title: "Natural Grace",
-                editions: "3/3 Available"
+                editions: "2/3 Available",
+                price: "₦95,000",
+                size: "18x24 inches"
               },
               {
                 image: "https://images.pexels.com/photos/1693100/pexels-photo-1693100.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
                 title: "Timeless Moments",
-                editions: "3/3 Available"
+                editions: "1/3 Available",
+                price: "₦120,000",
+                size: "20x30 inches"
+              },
+              {
+                image: "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                title: "Golden Hour Dreams",
+                editions: "3/3 Available",
+                price: "₦75,000",
+                size: "14x18 inches"
+              },
+              {
+                image: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                title: "Architectural Poetry",
+                editions: "3/3 Available",
+                price: "₦110,000",
+                size: "20x24 inches"
+              },
+              {
+                image: "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                title: "Serenity in Motion",
+                editions: "2/3 Available",
+                price: "₦90,000",
+                size: "16x24 inches"
+              },
+              {
+                image: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                title: "Abstract Emotions",
+                editions: "3/3 Available",
+                price: "₦100,000",
+                size: "18x22 inches"
+              },
+              {
+                image: "https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                title: "Vintage Elegance",
+                editions: "1/3 Available",
+                price: "₦130,000",
+                size: "24x30 inches"
               }
             ].map((item, index) => (
               <div key={index} className="group cursor-pointer">
@@ -232,14 +289,29 @@ function App() {
                       alt={item.title}
                       className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute top-3 left-3 bg-gray-900/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                      {item.size}
+                    </div>
                     <div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-semibold">
-                      Limited Edition
+                      {item.editions.includes('1/3') ? 'Last One!' : 'Limited Edition'}
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{item.editions}</p>
-                  <div className="bg-gray-800 p-3 rounded-lg">
-                    <p className="text-sm text-gray-300">Coming Soon</p>
+                  <div className="flex justify-between items-center mb-3">
+                    <p className="text-gray-400 text-sm">{item.editions}</p>
+                    <p className="text-yellow-400 font-bold text-lg">{item.price}</p>
+                  </div>
+                  <div className="space-y-2">
+                    <button 
+                      onClick={() => openWhatsApp(`Hi! I'm interested in "${item.title}" (${item.price}). Is this piece still available?`)}
+                      className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      <span>Order via WhatsApp</span>
+                    </button>
+                    <button className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                      View Details
+                    </button>
                   </div>
                 </div>
               </div>
@@ -248,15 +320,31 @@ function App() {
         </div>
       </section>
 
+      {/* Floating WhatsApp Button */}
+      {showWhatsApp && (
+        <div className="fixed bottom-6 right-6 z-50">
+          <button
+            onClick={() => openWhatsApp()}
+            className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 group"
+            title="Chat with us on WhatsApp"
+          >
+            <MessageCircle className="h-6 w-6" />
+          </button>
+          <div className="absolute -top-12 right-0 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            Chat with us!
+          </div>
+        </div>
+      )}
+
       {/* Email Signup */}
       <section id="contact" className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Stay in the Loop</h2>
           <p className="text-xl text-gray-400 mb-8">
-            Be the first to know when the official collection goes live. Join our exclusive list for early access and special previews.
+            Be the first to know about new releases and exclusive offers. Join our VIP list for early access and special previews.
           </p>
           
-          <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto">
+          <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
@@ -276,9 +364,27 @@ function App() {
             </div>
           </form>
           
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onClick={() => openWhatsApp("Hi! I'd like to know more about F8 Media Arts and how to place an order.")}
+              className="inline-flex items-center px-8 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-all duration-200 font-semibold text-lg group"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Order via WhatsApp
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </button>
+            <a 
+              href="tel:+2348123456789"
+              className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Call Us
+            </a>
+          </div>
+          
           {isSubmitted && (
             <p className="mt-4 text-green-400 font-medium">
-              Thank you! You'll be the first to know when we launch.
+              Thank you! You'll be the first to know about new releases.
             </p>
           )}
         </div>
@@ -308,11 +414,18 @@ function App() {
               >
                 <Mail className="h-6 w-6" />
               </a>
+              <button
+                onClick={() => openWhatsApp()}
+                className="text-gray-400 hover:text-green-400 transition-colors duration-200"
+              >
+                <MessageCircle className="h-6 w-6" />
+              </button>
             </div>
           </div>
           
           <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
             <p>&copy; 2025 F8 Media Arts. All rights reserved. Made in Nigeria 🇳🇬</p>
+            <p className="mt-2 text-sm">WhatsApp: +234 812 345 6789 | Email: hello@f8mediaarts.com</p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
               <span className="text-yellow-400">#F8MediaArts</span>
               <span className="text-yellow-400">#WallArtThatSpeaks</span>
