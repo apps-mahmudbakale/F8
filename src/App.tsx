@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Camera, Award, Truck, Users, Instagram, Mail, ArrowRight, Check, Star, Globe, MessageCircle, Phone } from 'lucide-react';
+import logo from './logo.png'; // Replace with your logo path
+import MockUp48 from './F8MediaArtsMockUp48.png'; // Replace with your mockup image path
+import MockUp53 from './F8MediaArtsMockUp53.png'; // Replace with your mockup image path
+import MockUp50 from './F8MediaArtsMockUp50.png'; // Replace with your mockup image path
+import MockUp54 from './F8MediaArtsMockUp54.png'; // Replace with your mockup image path
+import MockUp65 from './F8MediaArtsMockUp65.png'; // Replace with your mockup image path
+import MockUp80 from './F8MediaArtsMockUp80.png'; // Replace with your mockup image path
+import MockUp82 from './F8MediaArtsMockUp82.png'; // Replace with your mockup image path
+import MockUp87 from './F8MediaArtsMockUp87.png'; // Replace with your mockup image path
+import MockUp89 from './F8MediaArtsMockUp89.png'; // Replace with your mockup image path
 
 function App() {
   const [email, setEmail] = useState('');
@@ -31,7 +41,7 @@ function App() {
     }
   };
 
-  const whatsappNumber = "+2348123456789"; // Replace with actual WhatsApp number
+  const whatsappNumber = "+2348130619004"; // Replace with actual WhatsApp number
   const whatsappMessage = "Hi! I'm interested in F8 Media Arts limited edition pieces. Can you tell me more about the collection?";
   
   const openWhatsApp = (customMessage?: string) => {
@@ -46,7 +56,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Camera className="h-8 w-8 text-yellow-400" />
+              <img src={logo} className="h-[6.5rem] w-[6.5rem]" />
               <span className="text-xl font-bold">F8 Media Arts</span>
             </div>
             <div className="flex items-center space-x-6">
@@ -99,9 +109,9 @@ function App() {
               Follow @f8mediaarts
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
-            <button className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg">
+            <a href="#collection" className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg">
               View Collection Preview
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -165,41 +175,36 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">Wall Art That Speaks</h2>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-                Whether you're an art lover, a collector, or someone who simply wants to bring beauty and meaning into your space — this drop is for you.
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Us</h2>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                F8 Media Arts is a premium creative brand that transforms photography into exclusive, high quality framed art for collectors, interior lovers, and art enthusiasts. Born out of a deep love for visual storytelling, we specialize in crafting limited edition art pieces each produced only three times, signed by the artist, and delivered with a Certificate of Authenticity and a unique story.
               </p>
-              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Each piece in the F8 Media Arts collection represents years of storytelling through photography, now transformed into premium wall art that transforms any space into a gallery of emotion and beauty.
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                Founded by Shehu Ishola, a visual artist and human duties leader, F8 Media Arts is more than an art studio—it is a journey of perspective, emotion, and artistic truth. From a simple lens to global walls, our mission is to inspire spaces and souls with art that speaks, heals, and beautifies.
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-3">
-                  <Star className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-white">Premium Quality</h4>
-                    <p className="text-gray-400 text-sm">Museum-grade materials and professional framing</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Camera className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-white">Original Stories</h4>
-                    <p className="text-gray-400 text-sm">Each piece comes with its unique narrative</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                What makes us different? 98% of our artworks are created from mobile photography, proving that creativity isn’t about the gear—it’s about the eye, the story, and the soul behind the shot. Each piece is thoughtfully curated from real life moments, then reimagined into timeless visuals that reflect nature, serenity, life’s journey, and purposeful design.
+              </p>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                We do not sell downloadable files. Every artwork is sold only as a framed print, preserving its value and exclusivity.
+              </p>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                We believe your walls should reflect who you are—not just decorate your space.
+              </p>
+              <p className="text-lg text-yellow-400 font-semibold leading-relaxed text-justify">
+                Are you tired of boring walls?<br />
+                Let F8 Media Arts bring meaning and beauty into your world, one frame at a time.
+              </p>
             </div>
-            
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.pexels.com/photos/1760900/pexels-photo-1760900.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
+                  src={logo}
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
                 <img 
-                  src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
+                  src={MockUp89}
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg mt-8"
                 />
@@ -225,56 +230,56 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {[
               {
-                image: "https://images.pexels.com/photos/1579708/pexels-photo-1579708.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp48,
                 title: "Urban Reflections",
                 editions: "3/3 Available",
                 price: "₦85,000",
                 size: "16x20 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1070346/pexels-photo-1070346.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp53,
                 title: "Natural Grace",
                 editions: "2/3 Available",
                 price: "₦95,000",
                 size: "18x24 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1693100/pexels-photo-1693100.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp50,
                 title: "Timeless Moments",
                 editions: "1/3 Available",
                 price: "₦120,000",
                 size: "20x30 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp54,
                 title: "Golden Hour Dreams",
                 editions: "3/3 Available",
                 price: "₦75,000",
                 size: "14x18 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp65,
                 title: "Architectural Poetry",
                 editions: "3/3 Available",
                 price: "₦110,000",
                 size: "20x24 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp80,
                 title: "Serenity in Motion",
                 editions: "2/3 Available",
                 price: "₦90,000",
                 size: "16x24 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp82,
                 title: "Abstract Emotions",
                 editions: "3/3 Available",
                 price: "₦100,000",
                 size: "18x22 inches"
               },
               {
-                image: "https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+                image: MockUp87,
                 title: "Vintage Elegance",
                 editions: "1/3 Available",
                 price: "₦130,000",
@@ -395,7 +400,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Camera className="h-8 w-8 text-yellow-400" />
+              <img src={logo} className="h-[6.5rem] w-[6.5rem]" />
               <span className="text-xl font-bold">F8 Media Arts</span>
             </div>
             
