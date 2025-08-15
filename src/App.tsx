@@ -1,32 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import { Camera, Award, Truck, Users, Instagram, Mail, ArrowRight, Check, Star, Globe, MessageCircle, Phone } from 'lucide-react';
-import logo from './logo.png'; // Replace with your logo path
-import MockUp48 from './F8MediaArtsMockUp48.png'; // Replace with your mockup image path
-import MockUp53 from './F8MediaArtsMockUp53.png'; // Replace with your mockup image path
-import MockUp50 from './F8MediaArtsMockUp50.png'; // Replace with your mockup image path
-import MockUp54 from './F8MediaArtsMockUp54.png'; // Replace with your mockup image path
-import MockUp65 from './F8MediaArtsMockUp65.png'; // Replace with your mockup image path
-import MockUp80 from './F8MediaArtsMockUp80.png'; // Replace with your mockup image path
-import MockUp82 from './F8MediaArtsMockUp82.png'; // Replace with your mockup image path
-import MockUp87 from './F8MediaArtsMockUp87.png'; // Replace with your mockup image path
-import MockUp89 from './F8MediaArtsMockUp89.png'; // Replace with your mockup image path
+import React, { useState, useEffect } from "react";
+import {
+  Camera,
+  Award,
+  Truck,
+  Users,
+  Instagram,
+  Mail,
+  ArrowRight,
+  Check,
+  Star,
+  Globe,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
+import CollectionsPage from "./components/CollectionsPage";
+import ArtworkModal from "./components/ArtworkModal";
+import logo from "./logo.png"; // Replace with your logo path
+import VeinsOfLight from "./Between the Veins of Light.png"; // Replace with your mockup image path
+import WatchShore from "./The Watchful Shore.png"; // Replace with your mockup image path
+import SoloWalker from "./Solo Walker.png"; // Replace with your mockup image path
+import Foot from "./Foot Steps Beneath The Gazebo.jpg"; // Replace with your mockup image path
+import BroadStreet from "./Broad Street.png"; // Replace with your mockup image path
+import LatoriOlumo from "./LATORI OLUMO- A Land Scape of Endless Possiblilities .png"; // Replace with your mockup image path
+import LatoriOlumo2 from "./LATORI OLUMO- A Tapestry Of Culture and Continuity.png"; // Replace with your mockup image path
+import Glow from "./WHEN THE LIGHTS LET'S GO.png"; // Replace with your mockup image path
+import MockUp89 from "./F8MediaArtsMockUp89.png"; // Replace with your mockup image path
 
 function App() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const [currentPage, setCurrentPage] = useState<"home" | "collections">(
+    "home"
+  );
+  const [selectedArtwork, setSelectedArtwork] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     const handleShowWhatsApp = () => setShowWhatsApp(window.scrollY > 300);
-    
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('scroll', handleShowWhatsApp);
-    
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleShowWhatsApp);
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('scroll', handleShowWhatsApp);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleShowWhatsApp);
     };
   }, []);
 
@@ -36,33 +56,323 @@ function App() {
       setIsSubmitted(true);
       setTimeout(() => {
         setIsSubmitted(false);
-        setEmail('');
+        setEmail("");
       }, 3000);
     }
   };
 
-  const whatsappNumber = "+2348130619004"; // Replace with actual WhatsApp number
-  const whatsappMessage = "Hi! I'm interested in F8 Media Arts limited edition pieces. Can you tell me more about the collection?";
-  
+  const whatsappNumber = "+2348123456789"; // Replace with actual WhatsApp number
+  const whatsappMessage =
+    "Hi! I'm interested in F8 Media Arts limited edition pieces. Can you tell me more about the collection?";
+
   const openWhatsApp = (customMessage?: string) => {
     const message = customMessage || whatsappMessage;
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
   };
+
+  const artworks = [
+    {
+      image: VeinsOfLight,
+      title: "Between the Veins of Light",
+      editions: "3/3 Available",
+      price: "₦85,000",
+      size: "16x20 inches",
+      category: "urban",
+      description:
+        "A captivating exploration of modern city life through the lens of reflection and shadow. This piece captures the essence of urban solitude and the beauty found in everyday architectural moments.",
+      story: `At first glance, the lines seem infinite wavering yet deliberate, like a silent river of ink flowing through time. Each curve, each thread, bends toward a shared silence, inviting the viewer to listen with their eyes. But look deeper. There's a story unfolding between those lines.
+This is not a digital dream, nor a topographical map. In case you’re wondering—this is a window blind, captured from the narrow space between two layers of its woven fabric.
+Shot from within, the fabric transforms. The inner world of the blind becomes a canyon of shadow and light, with patterns drawn like ancient markings on sacred stone. The lines are threads of memory, interlaced in harmony and tension. Some are crisp and clear like recent thoughts. Others fade into the background, blurred by depth, softened by distance. They are the forgotten whispers of time passing.
+In the middle, where the two layers almost touch, a darkened vein runs down like a quiet heartbeat, grounding the entire piece. It is both division and connection. A path through uncertainty.
+The blurred, fading lines deeper within the frame are like memories you almost recall, familiar but untouchable. They remind us that clarity isn't always found in sharpness. Sometimes, it's in the blur, the suggestion of what was, or what could be.
+This image is a meditation. It asks you to slow down. To trace the veins of everyday objects and find the extraordinary in their form. To stand, for a moment, between two layers of something you thought you understood, and discover a new language in its silence.
+This is not just fabric. It is structure, it is softness, it is shadow and light.
+ And for a moment, it is everything.
+`,
+      technique: "Digital Photography",
+      year: "July 13, 2025",
+      location: "Alimosho Lagos State.",
+      features: [
+        "Museum-quality archival print",
+        "Premium wooden frame with matting",
+        "Certificate of authenticity",
+        "Artist signature and edition number",
+        "Professional packaging for shipping",
+        "Care instructions included",
+      ],
+    },
+    {
+      image: WatchShore,
+      title: "The Watchful Shore",
+      editions: "2/3 Available",
+      price: "₦95,000",
+      size: "18x24 inches",
+      category: "Adventurer By the Sea",
+      description:
+        "An intimate portrait of nature's delicate balance, showcasing the ethereal beauty of organic forms in their natural habitat.",
+      story: `A lone tree leans over the rocky shoreline, as if watching the sea. In the distance, a red cargo ship drifts quietly across the horizon. The scene is simple, yet profound—a quiet moment where land, sea, and sky meet to whisper a deeper message.
+The Story Behind the Art
+This piece was born from a quiet morning at Tarkwa Bay during a location visit for a regular camping event. With only a phone in hand, what was meant to be a routine scouting trip became a moment of unexpected stillness and insight.
+The ocean was calm. The rocks stood firm. A red cargo ship slowly crossed the horizon, and beside it, a wind-bent tree remained rooted in place. In that still moment, everything seemed to speak—not loudly, but clearly.
+The ship was later named “Ireti”, meaning Hope in Yoruba. Though its real name is unknown, it carries the spirit of what it represents—the courage to keep moving, even at a slow pace. The rocks symbolize life’s challenges. The waves remind us of constant change. And the lone tree stands tall as a symbol of endurance.
+The Watchful Shore is not just a photograph; it is a quiet message captured in time—one that speaks of calm strength, personal reflection, and the steady journey forward.
+Now preserved in sleek acrylic glass, this artwork is meant to bring that same spirit into your space—a daily reminder to stay rooted, stay hopeful, and keep moving.
+`,
+      technique: "Fine Art Photography",
+      year: "July 13, 2025",
+      location: "Ibese, Lagos, State",
+      features: [
+        "Giclée print on premium paper",
+        "Hand-selected frame with conservation matting",
+        "UV-protective glass",
+        "Signed certificate of authenticity",
+        "Archival quality guaranteed for 100+ years",
+        "Custom packaging with care instructions",
+      ],
+    },
+    {
+      image: SoloWalker,
+      title: "Solo Walker",
+      editions: "1/3 Available",
+      price: "₦120,000",
+      size: "20x30 inches",
+      category: "Adeventurer By the Sea",
+      description:
+        "A powerful study in human emotion and connection, this piece captures the raw authenticity of a fleeting moment.",
+      story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline—where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
+The silhouette of the lone figure, headphones on, barefoot in the cool water, isn’t about loneliness, it’s about presence. About walking your own pace in a noisy world. It’s about healing through rhythm, reflection, and reclaiming stillness.
+Captured during golden hour, the colors tell their own story:
+Soft orange and apricot streak the sky, symbolizing warmth and hope.
+Lavender and dusty blue clouds float like unspoken thoughts.
+"Amber reflections ripple across the water, grounding the soul to the earth."
+The silence in the image is not empty it’s full. Full of thought. Full of freedom. Full of the sacred ritual of walking alone without being lost.
+This artwork is for the seeker. The grounded dreamer. The person who knows that peace is often found with one step… and then another.
+`,
+      technique: "Portrait Photography",
+      year: "July 13, 2025",
+      location: "Takwabay, Lagos,State",
+      features: [
+        "Large format museum print",
+        "Premium hardwood frame with gold accents",
+        "Museum-grade matting",
+        "Certificate with detailed provenance",
+        "Artist's personal note about the piece",
+        "White-glove delivery service available",
+      ],
+    },
+    {
+      image: Foot,
+      title: "Foot Print Beneath the Gazebo",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Beneath the Gazebo",
+      description:
+        "A warm, inviting landscape that captures the magic of golden hour light.",
+      story: `As the sun began to rise on a quiet coastal morning, the beach still wore the memory of last night’s gathering; its surface a tapestry of footprints and shimmering specks of golden light.
+The footprints, some deep and confident, others light and hesitant, told stories of wanderers who had danced, strolled, and stood still under the wooden frame of an old gazebo. Above them, a lattice of light cast through the slatted roof—fell in dotted patterns, as though the stars themselves had visited and left their traces behind.
+This wasn’t just sand. It was a journal.
+Every indentation was a moment:
+ A child chasing waves, her small feet bouncing with joy.
+ Two lovers walking barefoot side by side, the space between their steps whispering secrets.
+ A man who stood still for a while perhaps reflecting, perhaps simply breathing.
+The light added magic. Golden orbs scattered across the scene, creating an almost musical rhythm to the silence. They didn’t just illuminate the footprints; they elevated them, turning ordinary impressions into sacred marks of presence.
+This art, caught in a fleeting moment, captures more than just where people walked. It captures why they walked. Under the soft embrace of morning light, the sand beneath the gazebo became a canvas of souls - a brief memory of existence before the tide comes to wash it all away.
+`,
+      technique: "Landscape Photography",
+      year: "July 13, 2025",
+      location: "Ibese, Lagos,State",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+    {
+      image: BroadStreet,
+      title: "Broad Street",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Beneath the Gazebo",
+      description:
+        "A warm, inviting landscape that captures the magic of golden hour light.",
+      story: `As the sun began to rise on a quiet coastal morning, the beach still wore the memory of last night’s gathering; its surface a tapestry of footprints and shimmering specks of golden light.
+The footprints, some deep and confident, others light and hesitant, told stories of wanderers who had danced, strolled, and stood still under the wooden frame of an old gazebo. Above them, a lattice of light cast through the slatted roof—fell in dotted patterns, as though the stars themselves had visited and left their traces behind.
+This wasn’t just sand. It was a journal.
+Every indentation was a moment:
+ A child chasing waves, her small feet bouncing with joy.
+ Two lovers walking barefoot side by side, the space between their steps whispering secrets.
+ A man who stood still for a while perhaps reflecting, perhaps simply breathing.
+The light added magic. Golden orbs scattered across the scene, creating an almost musical rhythm to the silence. They didn’t just illuminate the footprints; they elevated them, turning ordinary impressions into sacred marks of presence.
+This art, caught in a fleeting moment, captures more than just where people walked. It captures why they walked. Under the soft embrace of morning light, the sand beneath the gazebo became a canvas of souls - a brief memory of existence before the tide comes to wash it all away.
+`,
+      technique: "Landscape Photography",
+      year: "July 13, 2025",
+      location: "Ibese, Lagos,State",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+    {
+      image: LatoriOlumo,
+      title: "Latori Olumo",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Latori Olumo",
+      description:
+        "A warm, inviting landscape that captures the magic of golden hour light.",
+      story: `There are moments when the earth opens her palms and shows you all she has held for centuries. This is one of those moments.
+From the ancient height of Olumo Rock, the spirit of the land stretches wide, breathing through red rooftops, winding rivers, and green fields that roll like ancestral cloth across the horizon. This is Latori Olumo, the view from the crown of one of Yoruba land’s most sacred stones. And what a view it is.
+Each rooftop tells a story. Each bend in the river holds a prayer. The houses huddle close like family at evening fire, sharing warmth, history, and laughter. It is not chaos. It is rhythm. It is heartbeat. It is home.
+Far beyond the homes, the river glides — calm but full of wisdom. It has seen kings rise and empires settle, and it still flows, quietly blessing the land as it always has. The green stretches of earth sing softly to the sky above, echoing hope, resilience, and the quiet promise of abundance.
+This land does not whisper. It speaks. It speaks in the language of old gods and market women, of drummers and stone carvers, of warriors and children. Every tile, every tree, every path holds the voice of a people who have stood, who have built, who have endured.
+Latori Olumo is more than a view. It is a mirror of what is possible when we rise. It is a reminder that our stories are not small. That our lands are not empty. That our futures are not elsewhere — they are here, rooted in the soil and soul of who we are.
+So stand on Olumo Rock, breathe deeply, and look again. What you see is not just a town.
+ What you see is legacy.
+ What you see is promise.
+ What you see... is us.
+`,
+      technique: "Landscape Photography",
+      year: "Oct 12, 2024",
+      location: " Abeokuta, Ogun St",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+    {
+      image: LatoriOlumo2,
+      title: "Latori Olumo",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Latori Olumo",
+      description:
+        "A warm, inviting landscape that captures the magic of golden hour light.",
+      story: `From Above the Beautiful Walls of Olumo Rock  A Tapestry of Culture and Continuity
+Captured in Abeokuta, Ogun State
+From this sacred height, the heartbeat of a people rises in waves  rooftops pressed close like whispered stories, streets winding through time like old proverbs. This is Latori Olumo, seen again through a different lens. Not the wide embrace of the landscape this time, but the deep, soulful rhythm of a city that remembers.
+At the center stands a proud cathedral, painted in bold red and white like royalty wrapped in aso-oke. It anchors the town not just in faith, but in history. Around it, generations of homes, memories, and everyday life unfold like the pages of an old family book. From this view, you see not just architecture, but identity.
+These rooftops wear the rust of resilience. They speak of a people who have built with what they had, and held tight to what mattered  community, craft, and connection. You see it in the closeness of the homes, the quiet strength of the walls, the familiar dance of color across the cityscape.
+Look beyond the buildings and you’ll see the horizon stretch, as if calling this place forward into something even greater. But Abeokuta is not in a hurry. It knows who it is. And from the shoulders of Olumo Rock, you can feel that knowing settle in your chest.
+This image is not frozen. It lives. It pulses with life, love, laughter, and legacy. It says, “We are here. We have always been here.” And standing above it all, the rock watches like an elder quiet, steady, and proud.
+This, too, is Latori Olumo.
+ A view not just of a city, but of a spirit.
+ A reminder that every street has a story, and every story deserves to be seen.
+.
+`,
+      technique: "Landscape Photography",
+      year: "Oct 12, 2024",
+      location: " Abeokuta, Ogun St",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+     {
+      image: Glow,
+      title: "The Glow That Gives Way",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Sunset In My Pent",
+      description:
+        "A warm, inviting landscape that captures the magic of golden hour light.",
+      story: `From Above the Beautiful Walls of Olumo Rock  A Tapestry of Culture and Continuity
+Captured in Abeokuta, Ogun State
+From this sacred height, the heartbeat of a people rises in waves  rooftops pressed close like whispered stories, streets winding through time like old proverbs. This is Latori Olumo, seen again through a different lens. Not the wide embrace of the landscape this time, but the deep, soulful rhythm of a city that remembers.
+At the center stands a proud cathedral, painted in bold red and white like royalty wrapped in aso-oke. It anchors the town not just in faith, but in history. Around it, generations of homes, memories, and everyday life unfold like the pages of an old family book. From this view, you see not just architecture, but identity.
+These rooftops wear the rust of resilience. They speak of a people who have built with what they had, and held tight to what mattered  community, craft, and connection. You see it in the closeness of the homes, the quiet strength of the walls, the familiar dance of color across the cityscape.
+Look beyond the buildings and you’ll see the horizon stretch, as if calling this place forward into something even greater. But Abeokuta is not in a hurry. It knows who it is. And from the shoulders of Olumo Rock, you can feel that knowing settle in your chest.
+This image is not frozen. It lives. It pulses with life, love, laughter, and legacy. It says, “We are here. We have always been here.” And standing above it all, the rock watches like an elder quiet, steady, and proud.
+This, too, is Latori Olumo.
+ A view not just of a city, but of a spirit.
+ A reminder that every street has a story, and every story deserves to be seen.
+.
+`,
+      technique: "Landscape Photography",
+      year: "Nov 13, 2024",
+      location: "Alimosho Lagos State",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+  ];
+
+  const openModal = (artwork: any) => {
+    setSelectedArtwork(artwork);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedArtwork(null);
+  };
+
+  if (currentPage === "collections") {
+    return (
+      <CollectionsPage
+        onBack={() => setCurrentPage("home")}
+        onWhatsAppOrder={openWhatsApp}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+           <div className="flex items-center space-x-2">
               <img src={logo} className="h-[6.5rem] w-[6.5rem]" />
               <span className="text-xl font-bold">F8 Media Arts</span>
             </div>
             <div className="flex items-center space-x-6">
-              <a href="#about" className="hover:text-yellow-400 transition-colors duration-200">About</a>
-              <a href="#collection" className="hover:text-yellow-400 transition-colors duration-200">Collection</a>
-              <a href="#contact" className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-md hover:bg-yellow-500 transition-colors duration-200 font-medium">
+              <a
+                href="#about"
+                className="hover:text-yellow-400 transition-colors duration-200"
+              >
+                {" "}
+                About{" "}
+              </a>
+              <a
+                href="#collection"
+                className="hover:text-yellow-400 transition-colors duration-200"
+              >
+                {" "}
+                Collection{" "}
+              </a>
+              <a
+                href="#contact"
+                className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-md hover:bg-yellow-500 transition-colors duration-200 font-medium"
+              >
                 Get Notified
               </a>
             </div>
@@ -72,34 +382,40 @@ function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
-            transform: `translateY(${scrollY * 0.5}px)`
+            backgroundImage:
+              'url("https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
+            transform: `translateY(${scrollY * 0.5}px)`,
           }}
         />
         <div className="absolute inset-0 bg-gray-900/80" />
-        
+
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-yellow-400/20 text-yellow-400 border border-yellow-400/30 animate-pulse">
               🎉 OFFICIAL LAUNCH ANNOUNCEMENT
             </span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             Something Beautiful is
-            <span className="block text-yellow-400">Coming to Your Walls</span>
+            <span className="block text-yellow-400">
+              {" "}
+              Coming to Your Walls{" "}
+            </span>
           </h1>
-          
+
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            After years of capturing stories through the lens, I'm proud to unveil F8 Media Arts — 
-            premium digital art and photography offering limited-edition framed pieces that transform spaces and stir the soul.
+            After years of capturing stories through the lens, I'm proud to
+            unveil F8 Media Arts — premium digital art and photography offering
+            limited - edition framed pieces that transform spaces and stir the
+            soul.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
+            <a
               href="https://www.instagram.com/f8mediaarts"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,9 +425,12 @@ function App() {
               Follow @f8mediaarts
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
-            <a href="#collection" className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg">
-              View Collection Preview
-            </a>
+            <button
+              onClick={() => setCurrentPage("collections")}
+              className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg"
+            >
+              View Full Collection
+            </button>
           </div>
         </div>
       </section>
@@ -120,50 +439,77 @@ function App() {
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">What Makes F8 Media Arts Special</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              {" "}
+              What Makes F8 Media Arts Special{" "}
+            </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Every piece tells a story, every frame holds a moment, every edition is a treasure.
+              Every piece tells a story, every frame holds a moment, every
+              edition is a treasure.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="bg-gray-700 p-6 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="bg-yellow-400/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-yellow-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Limited Edition</h3>
-                <p className="text-gray-400">Only 3 framed editions per artwork, ensuring exclusivity and value.</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {" "}
+                  Limited Edition{" "}
+                </h3>
+                <p className="text-gray-400">
+                  {" "}
+                  Only 3 framed editions per artwork, ensuring exclusivity and
+                  value.
+                </p>
               </div>
             </div>
-            
+
             <div className="text-center group">
               <div className="bg-gray-700 p-6 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="bg-yellow-400/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Check className="h-8 w-8 text-yellow-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Signed & Certified</h3>
-                <p className="text-gray-400">Each piece is personally signed, certified, and framed with its unique story.</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {" "}
+                  Signed & Certified{" "}
+                </h3>
+                <p className="text-gray-400">
+                  {" "}
+                  Each piece is personally signed, certified, and framed with
+                  its unique story.
+                </p>
               </div>
             </div>
-            
+
             <div className="text-center group">
               <div className="bg-gray-700 p-6 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="bg-yellow-400/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-yellow-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Global Shipping</h3>
-                <p className="text-gray-400">Available for shipping both in Nigeria and internationally.</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {" "}
+                  Global Shipping{" "}
+                </h3>
+                <p className="text-gray-400">
+                  {" "}
+                  Available for shipping both in Nigeria and internationally.
+                </p>
               </div>
             </div>
-            
+
             <div className="text-center group">
               <div className="bg-gray-700 p-6 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="bg-yellow-400/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-yellow-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Curated Sizes</h3>
-                <p className="text-gray-400">Thoughtfully sized for both home and office spaces.</p>
+                <h3 className="text-xl font-semibold mb-2"> Curated Sizes </h3>
+                <p className="text-gray-400">
+                  {" "}
+                  Thoughtfully sized for both home and office spaces.
+                </p>
               </div>
             </div>
           </div>
@@ -175,36 +521,61 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Us</h2>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
-                F8 Media Arts is a premium creative brand that transforms photography into exclusive, high quality framed art for collectors, interior lovers, and art enthusiasts. Born out of a deep love for visual storytelling, we specialize in crafting limited edition art pieces each produced only three times, signed by the artist, and delivered with a Certificate of Authenticity and a unique story.
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                {" "}
+                Wall Art That Speaks{" "}
+              </h2>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed">
+                Whether you're an art lover, a collector, or someone who simply
+                wants to bring beauty and meaning into your space — this drop is
+                for you.
               </p>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
-                Founded by Shehu Ishola, a visual artist and human duties leader, F8 Media Arts is more than an art studio—it is a journey of perspective, emotion, and artistic truth. From a simple lens to global walls, our mission is to inspire spaces and souls with art that speaks, heals, and beautifies.
+              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                Each piece in the F8 Media Arts collection represents years of
+                storytelling through photography, now transformed into premium
+                wall art that transforms any space into a gallery of emotion and
+                beauty.
               </p>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
-                What makes us different? 98% of our artworks are created from mobile photography, proving that creativity isn’t about the gear—it’s about the eye, the story, and the soul behind the shot. Each piece is thoughtfully curated from real life moments, then reimagined into timeless visuals that reflect nature, serenity, life’s journey, and purposeful design.
-              </p>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
-                We do not sell downloadable files. Every artwork is sold only as a framed print, preserving its value and exclusivity.
-              </p>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
-                We believe your walls should reflect who you are—not just decorate your space.
-              </p>
-              <p className="text-lg text-yellow-400 font-semibold leading-relaxed text-justify">
-                Are you tired of boring walls?<br />
-                Let F8 Media Arts bring meaning and beauty into your world, one frame at a time.
-              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-3">
+                  <Star className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      {" "}
+                      Premium Quality{" "}
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      {" "}
+                      Museum - grade materials and professional framing{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Camera className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-white">
+                      {" "}
+                      Original Stories{" "}
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      {" "}
+                      Each piece comes with its unique narrative{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                <img 
-                  src={logo}
+                <img
+                  src="https://images.pexels.com/photos/1760900/pexels-photo-1760900.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
-                <img 
-                  src={MockUp89}
+                <img
+                  src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg mt-8"
                 />
@@ -221,106 +592,68 @@ function App() {
       <section id="collection" className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Collection Preview</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              {" "}
+              Collection Preview{" "}
+            </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Discover our curated selection of limited-edition pieces. Each artwork tells a unique story.
+              Discover our curated selection of limited - edition pieces.Each
+              artwork tells a unique story.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {[
-              {
-                image: MockUp48,
-                title: "Urban Reflections",
-                editions: "3/3 Available",
-                price: "₦85,000",
-                size: "16x20 inches"
-              },
-              {
-                image: MockUp53,
-                title: "Natural Grace",
-                editions: "2/3 Available",
-                price: "₦95,000",
-                size: "18x24 inches"
-              },
-              {
-                image: MockUp50,
-                title: "Timeless Moments",
-                editions: "1/3 Available",
-                price: "₦120,000",
-                size: "20x30 inches"
-              },
-              {
-                image: MockUp54,
-                title: "Golden Hour Dreams",
-                editions: "3/3 Available",
-                price: "₦75,000",
-                size: "14x18 inches"
-              },
-              {
-                image: MockUp65,
-                title: "Architectural Poetry",
-                editions: "3/3 Available",
-                price: "₦110,000",
-                size: "20x24 inches"
-              },
-              {
-                image: MockUp80,
-                title: "Serenity in Motion",
-                editions: "2/3 Available",
-                price: "₦90,000",
-                size: "16x24 inches"
-              },
-              {
-                image: MockUp82,
-                title: "Abstract Emotions",
-                editions: "3/3 Available",
-                price: "₦100,000",
-                size: "18x22 inches"
-              },
-              {
-                image: MockUp87,
-                title: "Vintage Elegance",
-                editions: "1/3 Available",
-                price: "₦130,000",
-                size: "24x30 inches"
-              }
-            ].map((item, index) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {artworks.slice(0, 8).map((item, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                   <div className="relative overflow-hidden rounded-lg mb-4">
-                    <img 
+                    <img
                       src={item.image}
                       alt={item.title}
                       className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-3 left-3 bg-gray-900/80 text-white px-2 py-1 rounded text-xs font-semibold">
-                      {item.size}
-                    </div>
                     <div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-semibold">
-                      {item.editions.includes('1/3') ? 'Last One!' : 'Limited Edition'}
+                      {item.editions.includes("1/3")
+                        ? "Last One!"
+                        : "Limited Edition"}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2"> {item.title} </h3>
                   <div className="flex justify-between items-center mb-3">
-                    <p className="text-gray-400 text-sm">{item.editions}</p>
-                    <p className="text-yellow-400 font-bold text-lg">{item.price}</p>
+                    <p className="text-gray-400 text-sm"> {item.editions} </p>
                   </div>
                   <div className="space-y-2">
-                    <button 
-                      onClick={() => openWhatsApp(`Hi! I'm interested in "${item.title}" (${item.price}). Is this piece still available?`)}
+                    <button
+                      onClick={() =>
+                        openWhatsApp(
+                          `Hi! I'm interested in "${item.title}" (${item.price}). Is this piece still available?`
+                        )
+                      }
                       className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
                     >
                       <MessageCircle className="h-4 w-4" />
-                      <span>Order via WhatsApp</span>
+                      <span>Order via WhatsApp </span>
                     </button>
-                    <button className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                    <button
+                      onClick={() => openModal(item)}
+                      className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                    >
                       View Details
                     </button>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setCurrentPage("collections")}
+              className="inline-flex items-center px-8 py-3 bg-yellow-400 text-gray-900 rounded-md hover:bg-yellow-500 transition-all duration-200 font-semibold text-lg group"
+            >
+              View Full Collection
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </button>
           </div>
         </div>
       </section>
@@ -344,11 +677,15 @@ function App() {
       {/* Email Signup */}
       <section id="contact" className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Stay in the Loop</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            {" "}
+            Stay in the Loop{" "}
+          </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Be the first to know about new releases and exclusive offers. Join our VIP list for early access and special previews.
+            Be the first to know about new releases and exclusive offers.Join
+            our VIP list for early access and special previews.
           </p>
-          
+
           <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
               <input
@@ -364,21 +701,25 @@ function App() {
                 disabled={isSubmitted}
                 className="px-8 py-3 bg-yellow-400 text-gray-900 rounded-md hover:bg-yellow-500 transition-colors duration-200 font-semibold whitespace-nowrap disabled:opacity-50"
               >
-                {isSubmitted ? 'Subscribed!' : 'Get Notified'}
+                {isSubmitted ? "Subscribed!" : "Get Notified"}
               </button>
             </div>
           </form>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
-              onClick={() => openWhatsApp("Hi! I'd like to know more about F8 Media Arts and how to place an order.")}
+              onClick={() =>
+                openWhatsApp(
+                  "Hi! I'd like to know more about F8 Media Arts and how to place an order."
+                )
+              }
               className="inline-flex items-center px-8 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-all duration-200 font-semibold text-lg group"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Order via WhatsApp
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
-            <a 
+            <a
               href="tel:+2348123456789"
               className="inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-300 rounded-md hover:bg-gray-300 hover:text-gray-900 transition-all duration-200 font-semibold text-lg"
             >
@@ -386,7 +727,7 @@ function App() {
               Call Us
             </a>
           </div>
-          
+
           {isSubmitted && (
             <p className="mt-4 text-green-400 font-medium">
               Thank you! You'll be the first to know about new releases.
@@ -399,13 +740,12 @@ function App() {
       <footer className="bg-gray-800 py-12 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <img src={logo} className="h-[6.5rem] w-[6.5rem]" />
               <span className="text-xl font-bold">F8 Media Arts</span>
             </div>
-            
             <div className="flex items-center space-x-6">
-              <a 
+              <a
                 href="https://www.instagram.com/f8mediaarts"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -413,7 +753,7 @@ function App() {
               >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a 
+              <a
                 href="mailto:hello@f8mediaarts.com"
                 className="text-gray-400 hover:text-yellow-400 transition-colors duration-200"
               >
@@ -427,19 +767,31 @@ function App() {
               </button>
             </div>
           </div>
-          
+
           <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-            <p>&copy; 2025 F8 Media Arts. All rights reserved. Made in Nigeria 🇳🇬</p>
-            <p className="mt-2 text-sm">WhatsApp: +234 812 345 6789 | Email: hello@f8mediaarts.com</p>
+            <p>
+              & copy; 2025 F8 Media Arts.All rights reserved.Made in Nigeria 🇳🇬
+            </p>
+            <p className="mt-2 text-sm">
+              {" "}
+              WhatsApp: +234 812 345 6789 | Email: hello @f8mediaarts.com
+            </p>
             <div className="mt-2 flex flex-wrap justify-center gap-2 text-sm">
-              <span className="text-yellow-400">#F8MediaArts</span>
-              <span className="text-yellow-400">#WallArtThatSpeaks</span>
-              <span className="text-yellow-400">#MadeInNigeria</span>
-              <span className="text-yellow-400">#LimitedEditionArt</span>
+              <span className="text-yellow-400"> #F8MediaArts </span>
+              <span className="text-yellow-400"> #WallArtThatSpeaks </span>
+              <span className="text-yellow-400"> #MadeInNigeria </span>
+              <span className="text-yellow-400"> #LimitedEditionArt </span>
             </div>
           </div>
         </div>
       </footer>
+
+      <ArtworkModal
+        artwork={selectedArtwork}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onWhatsAppOrder={openWhatsApp}
+      />
     </div>
   );
 }
