@@ -292,23 +292,21 @@ This, too, is Latori Olumo.
     },
      {
       image: Glow,
-      title: "The Glow That Gives Way",
+      title: " When the Lights Let’s Go",
       editions: "3/3 Available",
       price: "₦75,000",
       size: "14x18 inches",
       category: "Sunset In My Pent",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
-      story: `From Above the Beautiful Walls of Olumo Rock  A Tapestry of Culture and Continuity
-Captured in Abeokuta, Ogun State
-From this sacred height, the heartbeat of a people rises in waves  rooftops pressed close like whispered stories, streets winding through time like old proverbs. This is Latori Olumo, seen again through a different lens. Not the wide embrace of the landscape this time, but the deep, soulful rhythm of a city that remembers.
-At the center stands a proud cathedral, painted in bold red and white like royalty wrapped in aso-oke. It anchors the town not just in faith, but in history. Around it, generations of homes, memories, and everyday life unfold like the pages of an old family book. From this view, you see not just architecture, but identity.
-These rooftops wear the rust of resilience. They speak of a people who have built with what they had, and held tight to what mattered  community, craft, and connection. You see it in the closeness of the homes, the quiet strength of the walls, the familiar dance of color across the cityscape.
-Look beyond the buildings and you’ll see the horizon stretch, as if calling this place forward into something even greater. But Abeokuta is not in a hurry. It knows who it is. And from the shoulders of Olumo Rock, you can feel that knowing settle in your chest.
-This image is not frozen. It lives. It pulses with life, love, laughter, and legacy. It says, “We are here. We have always been here.” And standing above it all, the rock watches like an elder quiet, steady, and proud.
-This, too, is Latori Olumo.
- A view not just of a city, but of a spirit.
- A reminder that every street has a story, and every story deserves to be seen.
+      story: `On the evening of November 19, 2024, in Alimosho, Lagos, the sun rested low in the sky, a molten sphere glowing with the warmth of a promise kept. Its light draped over the world like a soft farewell, touching the heaped rooftop below  a dark silhouette rising like the peak of some distant mountain. Above, the clouds drifted in muted tones, as if the day itself was breathing its last sigh before surrendering to night.
+
+But this was no final goodbye. The sun was not retreating in loss; it was stepping aside in grace, making room for the moon to rise. In that quiet exchange, the heavens whispered an ancient truth, that the purpose of shining is not to dominate the sky, but to ensure the world never falls into darkness. Each takes its turn, each trusts the other to keep the light alive.
+
+How often do we guard our own glow too tightly, fearing it will fade if shared? Yet here, the sun teaches a different way, that the truest brilliance lies in knowing when to step back so another can rise. The faded clouds tell of transitions that need no struggle, no bitterness. The rooftop’s peak — like a mountain against the horizon reminds us that we, too, can be strong enough to lift others higher.
+
+For in the great turning of day into night, we see the quiet heroism of letting go. And in that surrender, the world remains forever bathed in light.
+
 .
 `,
       technique: "Landscape Photography",
