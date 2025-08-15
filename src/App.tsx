@@ -514,66 +514,41 @@ For in the great turning of day into night, we see the quiet heroism of letting 
         </div>
       </section>
 
-      {/* About Section */}
+           {/* About Section */}
       <section id="about" className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                {" "}
-                Wall Art That Speaks{" "}
-              </h2>
-              <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-                Whether you're an art lover, a collector, or someone who simply
-                wants to bring beauty and meaning into your space — this drop is
-                for you.
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Us</h2>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                F8 Media Arts is a premium creative brand that transforms photography into exclusive, high quality framed art for collectors, interior lovers, and art enthusiasts. Born out of a deep love for visual storytelling, we specialize in crafting limited edition art pieces each produced only three times, signed by the artist, and delivered with a Certificate of Authenticity and a unique story.
               </p>
-              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Each piece in the F8 Media Arts collection represents years of
-                storytelling through photography, now transformed into premium
-                wall art that transforms any space into a gallery of emotion and
-                beauty.
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                Founded by Shehu Ishola, a visual artist and human duties leader, F8 Media Arts is more than an art studio—it is a journey of perspective, emotion, and artistic truth. From a simple lens to global walls, our mission is to inspire spaces and souls with art that speaks, heals, and beautifies.
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-3">
-                  <Star className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      {" "}
-                      Premium Quality{" "}
-                    </h4>
-                    <p className="text-gray-400 text-sm">
-                      {" "}
-                      Museum - grade materials and professional framing{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Camera className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      {" "}
-                      Original Stories{" "}
-                    </h4>
-                    <p className="text-gray-400 text-sm">
-                      {" "}
-                      Each piece comes with its unique narrative{" "}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                What makes us different? 98% of our artworks are created from mobile photography, proving that creativity isn’t about the gear—it’s about the eye, the story, and the soul behind the shot. Each piece is thoughtfully curated from real life moments, then reimagined into timeless visuals that reflect nature, serenity, life’s journey, and purposeful design.
+              </p>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                We do not sell downloadable files. Every artwork is sold only as a framed print, preserving its value and exclusivity.
+              </p>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed text-justify">
+                We believe your walls should reflect who you are—not just decorate your space.
+              </p>
+              <p className="text-lg text-yellow-400 font-semibold leading-relaxed text-justify">
+                Are you tired of boring walls?<br />
+                Let F8 Media Arts bring meaning and beauty into your world, one frame at a time.
+              </p>
             </div>
-
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://images.pexels.com/photos/1760900/pexels-photo-1760900.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
+                <img 
+                  src={logo}
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
-                <img
-                  src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
+                <img 
+                  src={MockUp89}
                   alt="Art piece preview"
                   className="w-full h-64 object-cover rounded-lg shadow-lg mt-8"
                 />
