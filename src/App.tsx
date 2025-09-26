@@ -16,14 +16,15 @@ import {
 import CollectionsPage from "./components/CollectionsPage";
 import ArtworkModal from "./components/ArtworkModal";
 import logo from "./logo.png"; // Replace with your logo path
-import VeinsOfLight from "./Between the Veins of Light.png"; // Replace with your mockup image path
-import WatchShore from "./The Watchful Shore.png"; // Replace with your mockup image path
-import SoloWalker from "./Solo Walker.png"; // Replace with your mockup image path
-import Foot from "./Foot Steps Beneath The Gazebo.jpg"; // Replace with your mockup image path
-import BroadStreet from "./Broad Street.png"; // Replace with your mockup image path
-import LatoriOlumo from "./LATORI OLUMO- A Land Scape of Endless Possiblilities .png"; // Replace with your mockup image path
-import LatoriOlumo2 from "./LATORI OLUMO- A Tapestry Of Culture and Continuity.png"; // Replace with your mockup image path
-import Glow from "./WHEN THE LIGHTS LET'S GO.png"; // Replace with your mockup image path
+import VeinsOfLight from "./Frames/Between the Veins of Light.jpg"; // Replace with your mockup image path
+import WatchShore from "./Frames/THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
+import SoloWalker from "./Frames/SOLO WALKER.jpg"; // Replace with your mockup image path
+import Foot from "./Frames/Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
+import BroadStreet from "./Frames/BROAD STREET.jpg"; // Replace with your mockup image path
+import LatoriOlumo from "./Frames/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg"; // Replace with your mockup image path
+import LatoriOlumo2 from "./Frames/LATORI OLUMO- A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
+import Glow from "./Frames/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
+import OceanSpeaks from "./Frames/Ocean Speaks.jpg"; // Replace with your mockup image path
 import MockUp89 from "./F8MediaArtsMockUp89.png"; // Replace with your mockup image path
 
 function App() {
@@ -84,13 +85,13 @@ function App() {
       description:
         "A captivating exploration of modern city life through the lens of reflection and shadow. This piece captures the essence of urban solitude and the beauty found in everyday architectural moments.",
       story: `At first glance, the lines seem infinite wavering yet deliberate, like a silent river of ink flowing through time. Each curve, each thread, bends toward a shared silence, inviting the viewer to listen with their eyes. But look deeper. There's a story unfolding between those lines.
-This is not a digital dream, nor a topographical map. In case you’re wondering—this is a window blind, captured from the narrow space between two layers of its woven fabric.
+This is not a digital dream, nor a topographical map. In case you’re wondering, this is a window blind, captured from the narrow space between two layers of its woven fabric.
 Shot from within, the fabric transforms. The inner world of the blind becomes a canyon of shadow and light, with patterns drawn like ancient markings on sacred stone. The lines are threads of memory, interlaced in harmony and tension. Some are crisp and clear like recent thoughts. Others fade into the background, blurred by depth, softened by distance. They are the forgotten whispers of time passing.
 In the middle, where the two layers almost touch, a darkened vein runs down like a quiet heartbeat, grounding the entire piece. It is both division and connection. A path through uncertainty.
 The blurred, fading lines deeper within the frame are like memories you almost recall, familiar but untouchable. They remind us that clarity isn't always found in sharpness. Sometimes, it's in the blur, the suggestion of what was, or what could be.
 This image is a meditation. It asks you to slow down. To trace the veins of everyday objects and find the extraordinary in their form. To stand, for a moment, between two layers of something you thought you understood, and discover a new language in its silence.
 This is not just fabric. It is structure, it is softness, it is shadow and light.
- And for a moment, it is everything.
+ And for a moment, it is everything..
 `,
       technique: "Digital Photography",
       year: "July 13, 2025",
@@ -107,23 +108,24 @@ This is not just fabric. It is structure, it is softness, it is shadow and light
     {
       image: WatchShore,
       title: "The Watchful Shore",
-      editions: "2/3 Available",
+      editions: "3/3 Available",
       price: "₦95,000",
       size: "18x24 inches",
       category: "Adventurer By the Sea",
       description:
         "An intimate portrait of nature's delicate balance, showcasing the ethereal beauty of organic forms in their natural habitat.",
-      story: `A lone tree leans over the rocky shoreline, as if watching the sea. In the distance, a red cargo ship drifts quietly across the horizon. The scene is simple, yet profound—a quiet moment where land, sea, and sky meet to whisper a deeper message.
-The Story Behind the Art
+      story: `A lone tree leans over the rocky shoreline, as if watching the sea. In the distance, a red cargo ship drifts quietly across the horizon. The scene is simple, yet profound  a quiet moment where land, sea, and sky meet to whisper a deeper message.
 This piece was born from a quiet morning at Tarkwa Bay during a location visit for a regular camping event. With only a phone in hand, what was meant to be a routine scouting trip became a moment of unexpected stillness and insight.
-The ocean was calm. The rocks stood firm. A red cargo ship slowly crossed the horizon, and beside it, a wind-bent tree remained rooted in place. In that still moment, everything seemed to speak—not loudly, but clearly.
-The ship was later named “Ireti”, meaning Hope in Yoruba. Though its real name is unknown, it carries the spirit of what it represents—the courage to keep moving, even at a slow pace. The rocks symbolize life’s challenges. The waves remind us of constant change. And the lone tree stands tall as a symbol of endurance.
-The Watchful Shore is not just a photograph; it is a quiet message captured in time—one that speaks of calm strength, personal reflection, and the steady journey forward.
-Now preserved in sleek acrylic glass, this artwork is meant to bring that same spirit into your space—a daily reminder to stay rooted, stay hopeful, and keep moving.
+The ocean was calm. The rocks stood firm. A red cargo ship slowly crossed the horizon, and beside it, a wind-bent tree remained rooted in place. In that still moment, everything seemed to speak  not loudly, but clearly.
+The ship was later named “Ireti”, meaning Hope in Yoruba. Though its real name is unknown, it carries the spirit of what it represents the courage to keep moving, even at a slow pace. The rocks symbolize life’s challenges. The waves remind us of constant change. And the lone tree stands tall as a symbol of endurance.
+The Watchful Shore is not just a photograph; it is a quiet message captured in time one that speaks of calm strength, personal reflection, and the steady journey forward.
+Now preserved in sleek acrylic glass, this artwork is meant to bring that same spirit into your space a daily reminder to stay rooted, stay hopeful, and keep moving.
+Thank you for collecting this piece.
+ You haven’t just purchased art you’ve chosen a story that speaks..
 `,
       technique: "Fine Art Photography",
-      year: "July 13, 2025",
-      location: "Ibese, Lagos, State",
+      year: " Nov 12, 2023",
+      location: "Takwabay, Lagos,State.",
       features: [
         "Giclée print on premium paper",
         "Hand-selected frame with conservation matting",
@@ -142,17 +144,18 @@ Now preserved in sleek acrylic glass, this artwork is meant to bring that same s
       category: "Adeventurer By the Sea",
       description:
         "A powerful study in human emotion and connection, this piece captures the raw authenticity of a fleeting moment.",
-      story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline—where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
+      story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
+
 The silhouette of the lone figure, headphones on, barefoot in the cool water, isn’t about loneliness, it’s about presence. About walking your own pace in a noisy world. It’s about healing through rhythm, reflection, and reclaiming stillness.
-Captured during golden hour, the colors tell their own story:
+Captured during golden hour, the colours tell their own story:
 Soft orange and apricot streak the sky, symbolizing warmth and hope.
 Lavender and dusty blue clouds float like unspoken thoughts.
-"Amber reflections ripple across the water, grounding the soul to the earth."
+Amber reflections ripple across the water, grounding the soul to the earth.
 The silence in the image is not empty it’s full. Full of thought. Full of freedom. Full of the sacred ritual of walking alone without being lost.
 This artwork is for the seeker. The grounded dreamer. The person who knows that peace is often found with one step… and then another.
 `,
       technique: "Portrait Photography",
-      year: "July 13, 2025",
+      year: "Nov 12, 2023",
       location: "Takwabay, Lagos,State",
       features: [
         "Large format museum print",
@@ -172,19 +175,19 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       category: "Beneath the Gazebo",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
-      story: `As the sun began to rise on a quiet coastal morning, the beach still wore the memory of last night’s gathering; its surface a tapestry of footprints and shimmering specks of golden light.
-The footprints, some deep and confident, others light and hesitant, told stories of wanderers who had danced, strolled, and stood still under the wooden frame of an old gazebo. Above them, a lattice of light cast through the slatted roof—fell in dotted patterns, as though the stars themselves had visited and left their traces behind.
-This wasn’t just sand. It was a journal.
-Every indentation was a moment:
- A child chasing waves, her small feet bouncing with joy.
- Two lovers walking barefoot side by side, the space between their steps whispering secrets.
- A man who stood still for a while perhaps reflecting, perhaps simply breathing.
-The light added magic. Golden orbs scattered across the scene, creating an almost musical rhythm to the silence. They didn’t just illuminate the footprints; they elevated them, turning ordinary impressions into sacred marks of presence.
-This art, caught in a fleeting moment, captures more than just where people walked. It captures why they walked. Under the soft embrace of morning light, the sand beneath the gazebo became a canvas of souls - a brief memory of existence before the tide comes to wash it all away.
+      story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline—where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
+
+The silhouette of the lone figure, headphones on, barefoot in the cool water, isn’t about loneliness, it’s about presence. About walking your own pace in a noisy world. It’s about healing through rhythm, reflection, and reclaiming stillness.
+Captured during golden hour, the colors tell their own story:
+Soft orange and apricot streak the sky, symbolizing warmth and hope.
+Lavender and dusty blue clouds float like unspoken thoughts.
+Amber reflections ripple across the water, grounding the soul to the earth.
+The silence in the image is not empty it’s full. Full of thought. Full of freedom. Full of the sacred ritual of walking alone without being lost.
+This artwork is for the seeker. The grounded dreamer. The person who knows that peace is often found with one step… and then another.
 `,
       technique: "Landscape Photography",
       year: "July 13, 2025",
-      location: "Ibese, Lagos,State",
+      location: "Ibese, Lagos,State.",
       features: [
         "High-quality photographic print",
         "Classic wooden frame with natural finish",
@@ -200,22 +203,24 @@ This art, caught in a fleeting moment, captures more than just where people walk
       editions: "3/3 Available",
       price: "₦75,000",
       size: "14x18 inches",
-      category: "Beneath the Gazebo",
+      category: "Islander",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
-      story: `As the sun began to rise on a quiet coastal morning, the beach still wore the memory of last night’s gathering; its surface a tapestry of footprints and shimmering specks of golden light.
-The footprints, some deep and confident, others light and hesitant, told stories of wanderers who had danced, strolled, and stood still under the wooden frame of an old gazebo. Above them, a lattice of light cast through the slatted roof—fell in dotted patterns, as though the stars themselves had visited and left their traces behind.
-This wasn’t just sand. It was a journal.
-Every indentation was a moment:
- A child chasing waves, her small feet bouncing with joy.
- Two lovers walking barefoot side by side, the space between their steps whispering secrets.
- A man who stood still for a while perhaps reflecting, perhaps simply breathing.
-The light added magic. Golden orbs scattered across the scene, creating an almost musical rhythm to the silence. They didn’t just illuminate the footprints; they elevated them, turning ordinary impressions into sacred marks of presence.
-This art, caught in a fleeting moment, captures more than just where people walked. It captures why they walked. Under the soft embrace of morning light, the sand beneath the gazebo became a canvas of souls - a brief memory of existence before the tide comes to wash it all away.
+      story: `Broad Street is one of Lagos’ oldest roads, a place where time has folded generations into its pavements. Along its stretch, colonial grace and modern ambition stand shoulder to shoulder reminders of where we have come from and where we are going.
+The tall buildings cast long shadows, but they also reflect the light of possibility. Some of these structures have watched the city change from a sleepy port town into a restless giant; they have seen horses give way to cars, and market stalls grow into towers of glass. They hold stories of traders, artisans, families, and dreamers each adding their voice to the city’s ever-expanding chorus.
+Down below, the street itself breathes with commerce. Shops brim with textiles, electronics, books, and everything in between. The sidewalks are lined with signs of human determination, men and women who wake before the sun, who build futures from small stalls and bright smiles. Here, every exchange is more than business; it is a handshake of hope, a nod of trust, a promise of tomorrow.
+The architecture tells its own tale: colonial-era buildings with grand facades whisper of Lagos’ past, while sleek modern offices gleam with the city’s hunger for innovation. Together, they teach us that resilience is born not only from holding on to our roots, but also from daring to rise above them.
+Standing on Broad Street, you feel it; the quiet invitation to keep going. To believe that every step taken in honest work adds a brick to something bigger than yourself. That success is not always sudden, but built patiently over days and decades.
+This is not just a road.
+ It is a testament.
+ A place where history shakes hands with possibility.
+ A reminder that as long as we walk with purpose, the streets we travel can carry us farther than we ever imagined.
+This is Broad Street.
+ And it belongs to every heart that beats with hope.
 `,
       technique: "Landscape Photography",
-      year: "July 13, 2025",
-      location: "Ibese, Lagos,State",
+      year: "Dec. 28, 2022",
+      location: "Lagos,State",
       features: [
         "High-quality photographic print",
         "Classic wooden frame with natural finish",
@@ -234,20 +239,22 @@ This art, caught in a fleeting moment, captures more than just where people walk
       category: "Latori Olumo",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
-      story: `There are moments when the earth opens her palms and shows you all she has held for centuries. This is one of those moments.
+      story: `TThere are moments when the earth opens her palms and shows you all she has held for centuries. This is one of those moments.
 From the ancient height of Olumo Rock, the spirit of the land stretches wide, breathing through red rooftops, winding rivers, and green fields that roll like ancestral cloth across the horizon. This is Latori Olumo, the view from the crown of one of Yoruba land’s most sacred stones. And what a view it is.
 Each rooftop tells a story. Each bend in the river holds a prayer. The houses huddle close like family at evening fire, sharing warmth, history, and laughter. It is not chaos. It is rhythm. It is heartbeat. It is home.
-Far beyond the homes, the river glides — calm but full of wisdom. It has seen kings rise and empires settle, and it still flows, quietly blessing the land as it always has. The green stretches of earth sing softly to the sky above, echoing hope, resilience, and the quiet promise of abundance.
+
+Far beyond the homes, the river glides calm but full of wisdom. It has seen kings rise and empires settle, and it still flows, quietly blessing the land as it always has. The green stretches of earth sing softly to the sky above, echoing hope, resilience, and the quiet promise of abundance.
+
 This land does not whisper. It speaks. It speaks in the language of old gods and market women, of drummers and stone carvers, of warriors and children. Every tile, every tree, every path holds the voice of a people who have stood, who have built, who have endured.
-Latori Olumo is more than a view. It is a mirror of what is possible when we rise. It is a reminder that our stories are not small. That our lands are not empty. That our futures are not elsewhere — they are here, rooted in the soil and soul of who we are.
+Latori Olumo is more than a view. It is a mirror of what is possible when we rise. It is a reminder that our stories are not small. That our lands are not empty. That our futures are not elsewhere they are here, rooted in the soil and soul of who we are.
 So stand on Olumo Rock, breathe deeply, and look again. What you see is not just a town.
- What you see is legacy.
- What you see is promise.
- What you see... is us.
+What you see is legacy.
+What you see is promise.
+What you see... is us.
 `,
       technique: "Landscape Photography",
       year: "Oct 12, 2024",
-      location: " Abeokuta, Ogun St",
+      location: " Abeokuta, Ogun State",
       features: [
         "High-quality photographic print",
         "Classic wooden frame with natural finish",
@@ -270,12 +277,14 @@ So stand on Olumo Rock, breathe deeply, and look again. What you see is not just
 Captured in Abeokuta, Ogun State
 From this sacred height, the heartbeat of a people rises in waves  rooftops pressed close like whispered stories, streets winding through time like old proverbs. This is Latori Olumo, seen again through a different lens. Not the wide embrace of the landscape this time, but the deep, soulful rhythm of a city that remembers.
 At the center stands a proud cathedral, painted in bold red and white like royalty wrapped in aso-oke. It anchors the town not just in faith, but in history. Around it, generations of homes, memories, and everyday life unfold like the pages of an old family book. From this view, you see not just architecture, but identity.
-These rooftops wear the rust of resilience. They speak of a people who have built with what they had, and held tight to what mattered  community, craft, and connection. You see it in the closeness of the homes, the quiet strength of the walls, the familiar dance of color across the cityscape.
+These rooftops wear the rust of resilience. They speak of a people who have built with what they had, and held tight to what mattered which is community, craft, and connection. You see it in the closeness of the homes, the quiet strength of the walls, the familiar dance of colour across the cityscape.
+
 Look beyond the buildings and you’ll see the horizon stretch, as if calling this place forward into something even greater. But Abeokuta is not in a hurry. It knows who it is. And from the shoulders of Olumo Rock, you can feel that knowing settle in your chest.
 This image is not frozen. It lives. It pulses with life, love, laughter, and legacy. It says, “We are here. We have always been here.” And standing above it all, the rock watches like an elder quiet, steady, and proud.
+
 This, too, is Latori Olumo.
  A view not just of a city, but of a spirit.
- A reminder that every street has a story, and every story deserves to be seen.
+ A reminder that every street has a City, and every story deserves to be seen
 .
 `,
       technique: "Landscape Photography",
@@ -303,15 +312,42 @@ This, too, is Latori Olumo.
 
 But this was no final goodbye. The sun was not retreating in loss; it was stepping aside in grace, making room for the moon to rise. In that quiet exchange, the heavens whispered an ancient truth, that the purpose of shining is not to dominate the sky, but to ensure the world never falls into darkness. Each takes its turn, each trusts the other to keep the light alive.
 
-How often do we guard our own glow too tightly, fearing it will fade if shared? Yet here, the sun teaches a different way, that the truest brilliance lies in knowing when to step back so another can rise. The faded clouds tell of transitions that need no struggle, no bitterness. The rooftop’s peak — like a mountain against the horizon reminds us that we, too, can be strong enough to lift others higher.
+How often do we guard our own glow too tightly, fearing it will fade if shared? Yet here, the sun teaches a different way, that the truest brilliance lies in knowing when to step back so another can rise. The faded clouds tell of transitions that need no struggle, no bitterness. The rooftop’s peak like a mountain against the horizon reminds us that we, too, can be strong enough to lift others higher.
 
-For in the great turning of day into night, we see the quiet heroism of letting go. And in that surrender, the world remains forever bathed in light.
-
-.
+For in the great turning of day into night, we see the quiet heroism of letting go. And in that surrender, the world remains forever bathed in light..
 `,
       technique: "Landscape Photography",
-      year: "Nov 13, 2024",
+      year: "Nov 19, 2024",
       location: "Alimosho Lagos State",
+      features: [
+        "High-quality photographic print",
+        "Classic wooden frame with natural finish",
+        "Acid-free matting",
+        "Signed and numbered by artist",
+        "Protective packaging",
+        "Digital certificate of authenticity",
+      ],
+    },
+         {
+      image: OceanSpeaks,
+      title: "Ocean Speaks",
+      editions: "3/3 Available",
+      price: "₦75,000",
+      size: "14x18 inches",
+      category: "Sunset In My Pent",
+      description:
+        "",
+      story: `Every wave that meets the sand is not just water breaking it is a conversation, ancient and ongoing. The ocean speaks in whispers and roars, pulling forward then retreating, as if telling the land secrets too heavy to hold in one breath. 
+
+The shore listens quietly, patient and unresisting, knowing that each wave, no matter how fleeting, leaves its mark. Together, they compose a language without words rhythm, silence, return. Out in the distance, ships float like quiet witnesses, watching but never interfering. They remind us that not every presence in our lives is meant to touch us directly; some are simply there to frame the horizon, to remind us of scale. There is something both eternal and fragile in this meeting place. 
+
+The sea will always come back. The sand will always yield. And between them, stories of time, of change, of surrender, and of persistence will always be told. We, too, are like this shoreline sometimes the sea, relentless and searching; sometimes the sand, yielding yet enduring. 
+
+Growth is not always about building upward, sometimes it is about learning how to return, how to meet, how to let go, and how to remain. The shore never fears the tide, because it knows: what leaves will always return in another form.
+`,
+      technique: "Landscape Photography",
+      year: "Nov 25, 2023",
+      location: "Amuwo-Odofin, Lagos",
       features: [
         "High-quality photographic print",
         "Classic wooden frame with natural finish",
@@ -576,7 +612,7 @@ For in the great turning of day into night, we see the quiet heroism of letting 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-            {artworks.slice(0, 8).map((item, index) => (
+            {artworks.slice(0, 9).map((item, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
                   <div className="relative overflow-hidden rounded-lg mb-4">
