@@ -1,5 +1,5 @@
-import React from 'react';
-import { X, MessageCircle, Star, Award, Truck, Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, MessageCircle, Star, Award, Truck, Shield, Maximize2, Minimize2 } from 'lucide-react';
 
 interface ArtworkModalProps {
   artwork: {
@@ -21,6 +21,8 @@ interface ArtworkModalProps {
 }
 
 const ArtworkModal: React.FC<ArtworkModalProps> = ({ artwork, isOpen, onClose, onWhatsAppOrder }) => {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  
   if (!isOpen || !artwork) return null;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -29,35 +31,65 @@ const ArtworkModal: React.FC<ArtworkModalProps> = ({ artwork, isOpen, onClose, o
     }
   };
 
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isFullscreen) {
+        setIsFullscreen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isFullscreen]);
+
   return (
     <div 
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${isFullscreen ? 'p-0' : ''}`}
       onClick={handleBackdropClick}
     >
-      <div className="bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-gray-800 p-6 border-b border-gray-700 flex justify-between items-center">
+      <div className={`${isFullscreen ? 'w-full h-full' : 'bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh]'} overflow-y-auto`}>
+        <div className={`sticky top-0 ${isFullscreen ? 'bg-black/90' : 'bg-gray-800'} p-6 border-b border-gray-700 flex justify-between items-center`}>
           <h2 className="text-2xl font-bold text-white">{artwork.title}</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors duration-200 p-2"
-          >
-            <X className="h-6 w-6" />
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleFullscreen}
+              className="text-gray-400 hover:text-white transition-colors duration-200 p-2"
+              aria-label={isFullscreen ? 'Exit fullscreen' : 'View fullscreen'}
+            >
+              {isFullscreen ? (
+                <Minimize2 className="h-5 w-5" />
+              ) : (
+                <Maximize2 className="h-5 w-5" />
+              )}
+            </button>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-white transition-colors duration-200 p-2"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
         </div>
         
         <div className="p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Image Section */}
-            <div className="space-y-4">
-              <div className="relative">
+            <div className={isFullscreen ? 'h-[calc(100vh-100px)] flex items-center justify-center' : 'space-y-4'}>
+              <div className={`relative ${isFullscreen ? 'w-full h-full flex items-center justify-center' : ''}`}>
                 <img 
                   src={artwork.image}
                   alt={artwork.title}
-                  className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
+                  className={`${isFullscreen ? 'max-w-full max-h-full object-contain' : 'w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg'}`}
                 />
-                <div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-lg text-sm font-semibold">
-                  {artwork.editions.includes('1/3') ? 'Last Edition!' : 'Limited Edition'}
-                </div>
+                {!isFullscreen && (
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-lg text-sm font-semibold">
+                    {artwork.editions.includes('1/3') ? 'Last Edition!' : 'Limited Edition'}
+                  </div>
+                )}
               </div>
               
               <div className="grid grid-cols-2 gap-4 text-sm">
