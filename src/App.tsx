@@ -16,15 +16,15 @@ import {
 import CollectionsPage from "./components/CollectionsPage";
 import ArtworkModal from "./components/ArtworkModal";
 import logo from "./logo.png"; // Replace with your logo path
-import VeinsOfLight from "./Frames/Between the Veins of Light.jpg"; // Replace with your mockup image path
-import WatchShore from "./Frames/THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
-import SoloWalker from "./Frames/SOLO WALKER.jpg"; // Replace with your mockup image path
-import Foot from "./Frames/Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
-import BroadStreet from "./Frames/BROAD STREET.jpg"; // Replace with your mockup image path
-import LatoriOlumo from "./Frames/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg"; // Replace with your mockup image path
+import VeinsOfLight from "./Frames/3 of 3 /Between the viens of Light.jpg"; // Replace with your mockup image path
+import WatchShore from "./Frames/3 of 3 /THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
+import SoloWalker from "./Frames/3 of 3 /SOLO WALKER.jpg"; // Replace with your mockup image path
+import Foot from "./Frames/3 of 3 /Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
+import BroadStreet from "./Frames/9 of 9/BROAD STREET.jpg"; // Replace with your mockup image path
+import LatoriOlumo from "./Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg"; // Replace with your mockup image path
 import LatoriOlumo2 from "./Frames/LATORI OLUMO- A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
-import Glow from "./Frames/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
-import OceanSpeaks from "./Frames/Ocean Speaks.jpg"; // Replace with your mockup image path
+import Glow from "./Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
+import OceanSpeaks from "./Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
 import MockUp89 from "./F8MediaArtsMockUp89.png"; // Replace with your mockup image path
 
 function App() {
@@ -35,8 +35,24 @@ function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "collections">(
     "home"
   );
-  const [selectedArtwork, setSelectedArtwork] = useState<any>(null);
+  interface Artwork {
+    image: string;
+    title: string;
+    editions: string;
+    price: string;
+    sizes: { size: string; price: string }[];
+    category: string;
+    description: string;
+    story: string;
+    technique: string;
+    year: string;
+    location: string;
+    features: string[];
+  }
+
+  const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSizes, setSelectedSizes] = useState<Record<number, number>>({});
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -62,7 +78,7 @@ function App() {
     }
   };
 
-  const whatsappNumber = "+2348123456789"; // Replace with actual WhatsApp number
+  const whatsappNumber = "+2348130619004"; // Replace with actual WhatsApp number
   const whatsappMessage =
     "Hi! I'm interested in F8 Media Arts limited edition pieces. Can you tell me more about the collection?";
 
@@ -75,13 +91,15 @@ function App() {
   };
 
   const artworks = [
-    {
+   {
       image: VeinsOfLight,
       title: "Between the Veins of Light",
       editions: "3/3 Available",
-      price: "₦85,000",
-      size: "16x20 inches",
-      category: "urban",
+      sizes: [
+        { size: "18x24 inches", price: "₦250,000" },
+        { size: "24x36 inches", price: "₦350,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A captivating exploration of modern city life through the lens of reflection and shadow. This piece captures the essence of urban solitude and the beauty found in everyday architectural moments.",
       story: `At first glance, the lines seem infinite wavering yet deliberate, like a silent river of ink flowing through time. Each curve, each thread, bends toward a shared silence, inviting the viewer to listen with their eyes. But look deeper. There's a story unfolding between those lines.
@@ -109,9 +127,12 @@ This is not just fabric. It is structure, it is softness, it is shadow and light
       image: WatchShore,
       title: "The Watchful Shore",
       editions: "3/3 Available",
-      price: "₦95,000",
-      size: "18x24 inches",
-      category: "Adventurer By the Sea",
+      price: "₦260,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦260,000" },
+        { size: "24x36 inches", price: "₦360,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "An intimate portrait of nature's delicate balance, showcasing the ethereal beauty of organic forms in their natural habitat.",
       story: `A lone tree leans over the rocky shoreline, as if watching the sea. In the distance, a red cargo ship drifts quietly across the horizon. The scene is simple, yet profound  a quiet moment where land, sea, and sky meet to whisper a deeper message.
@@ -138,10 +159,13 @@ Thank you for collecting this piece.
     {
       image: SoloWalker,
       title: "Solo Walker",
-      editions: "1/3 Available",
-      price: "₦120,000",
-      size: "20x30 inches",
-      category: "Adeventurer By the Sea",
+      editions: "3/3 Available",
+      price: "₦240,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦240,000" },
+        { size: "24x36 inches", price: "₦340,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A powerful study in human emotion and connection, this piece captures the raw authenticity of a fleeting moment.",
       story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
@@ -166,13 +190,16 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
         "White-glove delivery service available",
       ],
     },
-    {
+     {
       image: Foot,
       title: "Foot Print Beneath the Gazebo",
       editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Beneath the Gazebo",
+      price: "₦230,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦230,000" },
+        { size: "24x36 inches", price: "₦330,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline—where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
@@ -200,10 +227,13 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
     {
       image: BroadStreet,
       title: "Broad Street",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Islander",
+      editions: "9/9 Available",
+      price: "₦145,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦145,000" },
+        { size: "24x36 inches", price: "₦210,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `Broad Street is one of Lagos’ oldest roads, a place where time has folded generations into its pavements. Along its stretch, colonial grace and modern ambition stand shoulder to shoulder reminders of where we have come from and where we are going.
@@ -230,13 +260,16 @@ This is Broad Street.
         "Digital certificate of authenticity",
       ],
     },
-    {
+      {
       image: LatoriOlumo,
-      title: "Latori Olumo",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Latori Olumo",
+      title: "Latori Olumo – Landscape of Endless Possibilities",
+      editions: "9/9 Available",
+      price: "₦145,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦145,000" },
+        { size: "24x36 inches", price: "₦210,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `TThere are moments when the earth opens her palms and shows you all she has held for centuries. This is one of those moments.
@@ -264,13 +297,16 @@ What you see... is us.
         "Digital certificate of authenticity",
       ],
     },
-    {
+     {
       image: LatoriOlumo2,
-      title: "Latori Olumo",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Latori Olumo",
+      title: "Latori Olumo – Tapestry of Culture & Continuity",
+      editions: "9/9 Available",
+      price: "₦150,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦150,000" },
+        { size: "24x36 inches", price: "₦220,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `From Above the Beautiful Walls of Olumo Rock  A Tapestry of Culture and Continuity
@@ -299,13 +335,16 @@ This, too, is Latori Olumo.
         "Digital certificate of authenticity",
       ],
     },
-     {
+    {
       image: Glow,
-      title: " When the Lights Let’s Go",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      title: "Glow That Gives Way",
+      editions: "9/9 Available",
+      price: "₦120,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦120,000" },
+        { size: "24x36 inches", price: "₦180,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `On the evening of November 19, 2024, in Alimosho, Lagos, the sun rested low in the sky, a molten sphere glowing with the warmth of a promise kept. Its light draped over the world like a soft farewell, touching the heaped rooftop below  a dark silhouette rising like the peak of some distant mountain. Above, the clouds drifted in muted tones, as if the day itself was breathing its last sigh before surrendering to night.
@@ -328,13 +367,16 @@ For in the great turning of day into night, we see the quiet heroism of letting 
         "Digital certificate of authenticity",
       ],
     },
-         {
+      {
       image: OceanSpeaks,
       title: "Ocean Speaks",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      editions: "9/9 Available",
+      price: "₦140,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦140,000" },
+        { size: "24x36 inches", price: "₦205,000" },
+      ],
+      category: "Signature Edition",
       description:
         "",
       story: `Every wave that meets the sand is not just water breaking it is a conversation, ancient and ongoing. The ocean speaks in whispers and roars, pulling forward then retreating, as if telling the land secrets too heavy to hold in one breath. 
@@ -613,45 +655,72 @@ Growth is not always about building upward, sometimes it is about learning how t
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {artworks.slice(0, 9).map((item, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2">
-                  <div className="relative overflow-hidden rounded-lg mb-4">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-semibold">
-                      {item.editions.includes("1/3")
-                        ? "Last One!"
-                        : "Limited Edition"}
+                <div key={index} className="group cursor-pointer">
+                  <div className="bg-gray-700 p-4 rounded-xl hover:bg-gray-600 transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
+                    <div className="relative overflow-hidden rounded-lg mb-4 flex-grow">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-semibold">
+                        {item.editions.includes("1/3")
+                          ? "Last One!"
+                          : "Limited Edition"}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <div className="flex justify-between items-center mb-3">
+                      <p className="text-gray-400 text-sm">{item.editions}</p>
+                      <div className="text-yellow-400 font-medium">
+                          {item.sizes[selectedSizes[index] || 0]?.size}: {item.sizes[selectedSizes[index] || 0]?.price}
+                      </div>
+                    </div>
+                    <div className="mt-auto space-y-2">
+                      {item.sizes.map((size, idx) => (
+                        <button
+                          key={idx}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedSizes(prev => ({
+                              ...prev,
+                              [index]: idx
+                            }));
+                          }}
+                          className={`w-full px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2 mb-2 last:mb-0 ${
+                            selectedSizes[index] === idx 
+                              ? 'bg-yellow-500 text-gray-900' 
+                              : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                          }`}
+                        >
+                          {size.size}
+                        </button>
+                      ))}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const selectedSize = item.sizes[selectedSizes[index] || 0];
+                          openWhatsApp(
+                            `Hi! I'm interested in "${item.title}" (${selectedSize.size}, ${selectedSize.price}). Is this piece still available?`
+                          );
+                        }}
+                        className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        <span>Order via WhatsApp</span>
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openModal(item);
+                        }}
+                        className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                      >
+                        View Details
+                      </button>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2"> {item.title} </h3>
-                  <div className="flex justify-between items-center mb-3">
-                    <p className="text-gray-400 text-sm"> {item.editions} </p>
-                  </div>
-                  <div className="space-y-2">
-                    <button
-                      onClick={() =>
-                        openWhatsApp(
-                          `Hi! I'm interested in "${item.title}" (${item.price}). Is this piece still available?`
-                        )
-                      }
-                      className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      <span>Order via WhatsApp </span>
-                    </button>
-                    <button
-                      onClick={() => openModal(item)}
-                      className="w-full bg-gray-800 hover:bg-gray-700 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                    >
-                      View Details
-                    </button>
-                  </div>
                 </div>
-              </div>
             ))}
           </div>
 

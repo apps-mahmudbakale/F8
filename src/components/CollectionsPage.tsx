@@ -1,40 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { ArrowLeft, MessageCircle, Filter, Grid, List } from 'lucide-react';
 import ArtworkModal from './ArtworkModal';
-import VeinsOfLight from "../Frames/Between the Veins of Light.jpg"; // Replace with your mockup image path
-import WatchShore from "../Frames/THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
-import SoloWalker from "../Frames/SOLO WALKER.jpg"; // Replace with your mockup image path
-import Foot from "../Frames/Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
-import BroadStreet from "../Frames/BROAD STREET.jpg"; // Replace with your mockup image path
-import LatoriOlumo from "../Frames/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg"; // Replace with your mockup image path
+import VeinsOfLight from "../Frames/3 of 3 /Between the viens of Light.jpg"; // Replace with your mockup image path
+import WatchShore from "../Frames/3 of 3 /THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
+import SoloWalker from "../Frames/3 of 3 /SOLO WALKER.jpg"; // Replace with your mockup image path
+import Foot from "../Frames/3 of 3 /Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
+import BroadStreet from "../Frames/9 of 9/BROAD STREET.jpg"; // Replace with your mockup image path
+import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless Possiblilities .jpg.jpg"; // Replace with your mockup image path
 import LatoriOlumo2 from "../Frames/LATORI OLUMO- A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
-import Glow from "../Frames/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
-import OceanSpeaks from "../Frames/Ocean Speaks.jpg"; // Replace with your mockup image path
-import Ayanfe from "../Frames/Ayànfẹ́ Aràjọ́ (Beloved Sojourner).jpg"; // Replace with your mockup image path
-import Beyond from "../Frames/Beyond the Dying Light.jpg"; // Replace with your mockup image path
-import Companions from "../Frames/Companions by the Sea.jpg"; // Replace with your mockup image path
-import BuyMe from "../Frames/Buy me.jpg"; // Replace with your mockup image path
-import Wave from "../Frames/The Wake We Leave Behind.jpg"; // Replace with your mockup image path
-import Resting from "../Frames/Resting Between Journeys.jpg"; // Replace with your mockup image path
-import Gangan from "../Frames/GANGAN - The Ancient Messager.jpg"; // Replace with your mockup image path  
-import Fisherman from "../Frames/Fisherman’s Thought.jpg"; // Replace with your mockup image path 
-import Fisherman2 from "../Frames/Fisherman and the Tides.jpg"; // Replace with your mockup image path 
-import Foundation from "../Frames/FOUNDATIONS.jpg"; // Replace with your mockup image path 
-import Echos from "../Frames/Echoes of the Dunes.jpg"; // Replace with your mockup image path 
-import Clarity from "../Frames/Clarity in Branches.jpg"; // Replace with your mockup image path 
-import Mirror from "../Frames/SAND AND THE BEACH 2.jpg"; // Replace with your mockup image path 
-import Petals from "../Frames/Mirrored Petals.jpg"; // Replace with your mockup image path 
-import Bombom from "../Frames/The Journey of Bombom.jpg"; // Replace with your mockup image path 
-import LifeBalance from "../Frames/Life No Balance- POWER LINE.jpg"; // Replace with your mockup image path 
-import WhenTrees from "../Frames/When Trees Meet the Sky.jpg"; // Replace with your mockup image path 
-import IYANAPAJA from "../Frames/Ikoyi Link Bridge.jpg"; // Replace with your mockup image path 
-import Breath from "../Frames/Breath of the Arctic Snow.jpg"; // Replace with your mockup image path 
-import Ikare from "../Frames/The Ikare Hills.jpg"; // Replace with your mockup image path 
-
-
-
-
-
+import Glow from "../Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
+import OceanSpeaks from "../Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
+import Ayanfe from "../Frames/3 of 3 /Ayanfe Arájò (Beloved Sojourner).jpg"; // Replace with your mockup image path
+import Beyond from "../Frames/9 of 9/Beyond the Dying Light.jpg"; // Replace with your mockup image path
+import Companions from "../Frames/9 of 9/Companions by the Sea.jpg"; // Replace with your mockup image path
+import BuyMe from "../Frames/9 of 9/Buy me.jpg"; // Replace with your mockup image path
+import Wave from "../Frames/3 of 3 /The Wave We Leave Behind.jpg"; // Replace with your mockup image path
+import Resting from "../Frames/9 of 9/Resting Between Journeys.jpg"; // Replace with your mockup image path
+import Gangan from "../Frames/3 of 3 /GANGAN - The Ancient Messager.jpg"; // Replace with your mockup image path  
+import Fisherman from "../Frames/9 of 9/LIFE ON THE SEA 2, Fisherman’s Thought.jpg"; // Replace with your mockup image path 
+import Fisherman2 from "../Frames/9 of 9/LIFE ON THE SEA  - Fisherman and the Tides.jpg"; // Replace with your mockup image path 
+import Foundation from "../Frames/9 of 9/FOUNDATIONS.jpg"; // Replace with your mockup image path 
+import Echos from "../Frames/9 of 9/Echoes of the Dunes.jpg"; // Replace with your mockup image path 
+import Clarity from "../Frames/3 of 3 /Clarity in Branches.jpg"; // Replace with your mockup image path 
+import Mirror from "../Frames/9 of 9/SAND AND THE BEACH 2.jpg"; // Replace with your mockup image path 
+import Petals from "../Frames/9 of 9/Mirrored Petals.jpg"; // Replace with your mockup image path 
+import Bombom from "../Frames/9 of 9/The Journey of Bombom.jpg"; // Replace with your mockup image path 
+import LifeBalance from "../Frames/9 of 9/Life No Balance- POWER LINE.jpg.jpg"; // Replace with your mockup image path 
+import WhenTrees from "../Frames/9 of 9/When Trees Meet the Sky.jpg"; // Replace with your mockup image path 
+import IYANAPAJA from "../Frames/9 of 9/The Sting and the Shelter.jpg"; // Replace with your mockup image path 
+import Breath from "../Frames/3 of 3 /Breath of the Arctic Snow.jpg"; // Replace with your mockup image path 
+import Ikare from "../Frames/9 of 9/The Ikare Hills.jpg.jpg"; // Replace with your mockup image path 
+import Ikoyi from "../Frames/3 of 3 /Ikoyi Link Bridge.jpg";
 
 
 interface Artwork {
@@ -42,7 +38,7 @@ interface Artwork {
   title: string;
   editions: string;
   price: string;
-  size: string;
+  sizes: { size: string; price: string }[];
   category: string;
   description: string;
   story: string;
@@ -70,9 +66,11 @@ const CollectionsPage: React.FC<CollectionsPageProps> = ({ onBack, onWhatsAppOrd
       image: VeinsOfLight,
       title: "Between the Veins of Light",
       editions: "3/3 Available",
-      price: "₦85,000",
-      size: "16x20 inches",
-      category: "urban",
+      sizes: [
+        { size: "18x24 inches", price: "₦250,000" },
+        { size: "24x36 inches", price: "₦350,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A captivating exploration of modern city life through the lens of reflection and shadow. This piece captures the essence of urban solitude and the beauty found in everyday architectural moments.",
       story: `At first glance, the lines seem infinite wavering yet deliberate, like a silent river of ink flowing through time. Each curve, each thread, bends toward a shared silence, inviting the viewer to listen with their eyes. But look deeper. There's a story unfolding between those lines.
@@ -100,9 +98,12 @@ This is not just fabric. It is structure, it is softness, it is shadow and light
       image: WatchShore,
       title: "The Watchful Shore",
       editions: "3/3 Available",
-      price: "₦95,000",
-      size: "18x24 inches",
-      category: "Adventurer By the Sea",
+      price: "₦260,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦260,000" },
+        { size: "24x36 inches", price: "₦360,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "An intimate portrait of nature's delicate balance, showcasing the ethereal beauty of organic forms in their natural habitat.",
       story: `A lone tree leans over the rocky shoreline, as if watching the sea. In the distance, a red cargo ship drifts quietly across the horizon. The scene is simple, yet profound  a quiet moment where land, sea, and sky meet to whisper a deeper message.
@@ -129,10 +130,13 @@ Thank you for collecting this piece.
     {
       image: SoloWalker,
       title: "Solo Walker",
-      editions: "1/3 Available",
-      price: "₦120,000",
-      size: "20x30 inches",
-      category: "Adeventurer By the Sea",
+      editions: "3/3 Available",
+      price: "₦240,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦240,000" },
+        { size: "24x36 inches", price: "₦340,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A powerful study in human emotion and connection, this piece captures the raw authenticity of a fleeting moment.",
       story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
@@ -161,9 +165,12 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       image: Foot,
       title: "Foot Print Beneath the Gazebo",
       editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Beneath the Gazebo",
+      price: "₦230,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦230,000" },
+        { size: "24x36 inches", price: "₦330,000" },
+      ],
+      category: "Collector’s Elite",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `There’s a certain kind of peace that only solitude can teach. Solo Walker was born from a quiet evening on the shoreline—where the ocean whispered, the sky blushed in pastel hues, and the world seemed to slow just for a moment.
@@ -191,10 +198,13 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
     {
       image: BroadStreet,
       title: "Broad Street",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Islander",
+      editions: "9/9 Available",
+      price: "₦145,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦145,000" },
+        { size: "24x36 inches", price: "₦210,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `Broad Street is one of Lagos’ oldest roads, a place where time has folded generations into its pavements. Along its stretch, colonial grace and modern ambition stand shoulder to shoulder reminders of where we have come from and where we are going.
@@ -223,11 +233,14 @@ This is Broad Street.
     },
     {
       image: LatoriOlumo,
-      title: "Latori Olumo",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Latori Olumo",
+      title: "Latori Olumo – Landscape of Endless Possibilities",
+      editions: "9/9 Available",
+      price: "₦145,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦145,000" },
+        { size: "24x36 inches", price: "₦210,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `TThere are moments when the earth opens her palms and shows you all she has held for centuries. This is one of those moments.
@@ -257,11 +270,14 @@ What you see... is us.
     },
     {
       image: LatoriOlumo2,
-      title: "Latori Olumo",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Latori Olumo",
+      title: "Latori Olumo – Tapestry of Culture & Continuity",
+      editions: "9/9 Available",
+      price: "₦150,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦150,000" },
+        { size: "24x36 inches", price: "₦220,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `From Above the Beautiful Walls of Olumo Rock  A Tapestry of Culture and Continuity
@@ -292,11 +308,14 @@ This, too, is Latori Olumo.
     },
     {
       image: Glow,
-      title: " When the Lights Let’s Go",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      title: "Glow That Gives Way",
+      editions: "9/9 Available",
+      price: "₦120,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦120,000" },
+        { size: "24x36 inches", price: "₦180,000" },
+      ],
+      category: "Signature Edition",
       description:
         "A warm, inviting landscape that captures the magic of golden hour light.",
       story: `On the evening of November 19, 2024, in Alimosho, Lagos, the sun rested low in the sky, a molten sphere glowing with the warmth of a promise kept. Its light draped over the world like a soft farewell, touching the heaped rooftop below  a dark silhouette rising like the peak of some distant mountain. Above, the clouds drifted in muted tones, as if the day itself was breathing its last sigh before surrendering to night.
@@ -322,10 +341,13 @@ For in the great turning of day into night, we see the quiet heroism of letting 
     {
       image: OceanSpeaks,
       title: "Ocean Speaks",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      editions: "9/9 Available",
+      price: "₦140,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦140,000" },
+        { size: "24x36 inches", price: "₦205,000" },
+      ],
+      category: "Signature Edition",
       description:
         "",
       story: `Every wave that meets the sand is not just water breaking it is a conversation, ancient and ongoing. The ocean speaks in whispers and roars, pulling forward then retreating, as if telling the land secrets too heavy to hold in one breath. 
@@ -352,16 +374,19 @@ Growth is not always about building upward, sometimes it is about learning how t
       image: Ayanfe,
       title: "Ayànfẹ́ Aràjọ́ (Beloved Sojourner)",
       editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      price: "₦230,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦230,000" },
+        { size: "24x36 inches", price: "₦330,000" }
+      ],
+      category: "Collector's Elite",
       description:
         "",
       story: `On the rough earth, where stones glisten with grains of sand and fragments of color, a small traveler makes its steady journey. It is a caterpillar its body dark and striped with pale green, its head and tail crowned in fiery orange, its sides armed with fine bristles like a shield.
 
 To the casual eye, it is only an insect, fragile and slow. But within Ayanfe Arájò lies a hidden promise, the story of change. After days of crawling, feeding, and enduring, it will surrender to stillness. From that silence, it will rise again with wings, a reminder that patience births transformation.
 
-I fell in love with the beauty of the caterpillar but dared not touch it, knowing its bristles could raise a rash on the skin. Instead, I took a picture and whispered my farewell. Each time I look at that image, with the caterpillar framed against the seeming colored stones, I remember the traveler, as I was one too on that faithful day, journeying from Kwara State to Lagos. Our vehicle had stopped to buy fuel, and in that pause of time, I was fortunate enough to encounter the sojourner. It taught me that sometimes love is not possession, but admiration from a distance honoring beauty without disturbing it.
+I fell in love with the beauty of the caterpillar but dared not touch it, knowing its bristles could raise a rash on the skin. Instead
 
 The sojourner teaches quietly. Just as rivers carve their paths with time, so too does this caterpillar move with persistence toward an unseen destiny. Its journey is a mirror of life where progress may be slow, yet each step is meaningful.
 Thus, Ayanfe Arájò is more than a crawler on the earth, it is a metaphor of existence, of patience, of love from afar. A reminder that in every journey, no matter how small, lies the promise of becoming something greater.
@@ -381,10 +406,13 @@ Thus, Ayanfe Arájò is more than a crawler on the earth, it is a metaphor of ex
     {
       image: Beyond,
       title: "Beyond the Dying Light",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      editions: "9/9 Available",
+      price: "₦140,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦140,000" },
+        { size: "24x36 inches", price: "₦205,000" },
+      ],
+      category: "Signature Edition",
       description:
         "",
       story: `The day had labored long, its warmth lingering even as the sun began its slow descent. The sky turned into a canvas of fading fire gold melting into amber, crimson dissolving into the quiet embrace of night. Birds traced their way across the horizon, returning home as if guided by the fading glow.
@@ -410,9 +438,12 @@ As shadows deepened, I realized the sunset was more than beauty it was a mirror.
     {
       image: Companions,
       title: "Companions by the Sea",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
+      editions: "9/9 Available",
+      price: "₦145,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦145,000" },
+        { size: "24x36 inches", price: "₦210,000" },
+      ],
       category: "Sunset In My Pent",
       description:
         "",
@@ -444,10 +475,13 @@ For in companionship, as in the sea, there was a truth unshaken: life is lighter
     {
       image: BuyMe,
       title: "Buy Me",
-      editions: "3/3 Available",
-      price: "₦75,000",
-      size: "14x18 inches",
-      category: "Sunset In My Pent",
+      editions: "9/9 Available",
+      price: "₦125,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦125,000" },
+        { size: "24x36 inches", price: "₦185,000" },
+      ],
+      category: "Signature Edition",
       description:
         "",
       story: `Some will see it as ridicule. Others will see it as creativity. But the truth is, art often exists in that gray space where interpretation divides us.
@@ -479,9 +513,12 @@ BUY ME`,
       image: Wave,
       title: "The WaVe We Leave Behind",
       editions: "3/3 Available",
-      price: "₦88,000",
-      size: "18x24 inches",
-      category: "urban",
+      price: "₦230,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦230,000" },
+        { size: "24x36 inches", price: "₦330,000" },
+      ],
+      category: "Collector’s Elite",
       description: "A vibrant exploration of city life through layered architectural elements and dynamic compositions.",
       story: `The boat cut across the Lagos waters, leaving behind a trail of foam that danced and dissolved in moments. Ahead, the horizon opened into an expanse of sky, a blue so vast it made the tiny clouds drift like whispers, scattered and weightless.
 
@@ -504,12 +541,45 @@ We move, we leave, we arrive and still, the tide carries us forward.
       ],
     },
     {
+      image: Ikoyi,
+      title: "Ikoyi Link Bridge",
+      editions: "3/3 Available",
+      price: "₦260,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦260,000" },
+        { size: "24x36 inches", price: "₦360,000" },
+      ],
+      category: "Collector’s Elite",
+      description: "The Ikoyi Link Bridge, completed in 2013, stands as one of Lagos’ most iconic landmarks.",
+      story: `The Ikoyi Link Bridge, completed in 2013, stands as one of Lagos’ most iconic landmarks. Stretching over the Five Cowrie Creek, it connects the upscale district of Ikoyi to the bustling neighborhoods of Lekki, creating a vital artery in the daily movement of the city.
+
+More than a structure of steel and cables, the bridge eases traffic, shortens commutes, and provides a reliable link between two of Lagos’ most significant hubs. Every day, it carries cars, motorcycles, cyclists, and pedestrians, each with their own stories; from professionals heading to work, to families moving between homes, to visitors simply admiring the city’s skyline.
+
+At night, its lights reflect across the waters, giving Lagos a modern glow, while by day, it remains a busy passage where thousands cross with purpose. For many, the Ikoyi Link Bridge is a convenience; for Lagos as a whole, it is a reminder of progress, connection, and the city’s never-ending rhythm.
+
+Beyond its daily function, the Ikoyi Link Bridge also stands as a symbol of Lagos’ growth; a reminder of the city’s push toward greater connectivity and the promise of a future where its people and places are even more closely linked.
+.
+`,
+      technique: "Digital Composite",
+      year: "November 10, 2024",
+      location: "Ikoyi Link Bridge, Eti- Osa Lagos State",
+      features: [
+        "Limited edition of 3",
+        "Archival pigment print",
+        "Hand-signed and numbered",
+        "Includes authentication certificate"
+      ],
+    },
+    {
       image: Foundation,
       title: "Foundations",
-      editions: "2/3 Available",
-      price: "₦92,000",
-      size: "20x30 inches",
-      category: "landscape",
+      editions: "9/9 Available",
+      price: "₦135,000",
+      sizes: [
+        { size: "18x24 inches", price: "₦135,000" },
+        { size: "24x36 inches", price: "₦200,000" },
+      ],
+      category: "Signature Edition",
       description: "A serene coastal scene where sky meets sea in perfect harmony, capturing a moment of quiet reflection.",
       story: `Growth is never an accident it is built, stone by stone, choice by choice.
 In this frame, the rocks sit firm, weathered and unmoving, forming a barrier where land meets restless sea. The waves crash and curl between them, reminding us that no foundation exists without resistance. Water will always seek a way through, and life will always test the walls we build. Yet, it is in this tension between force and firmness that true strength is born.
@@ -534,9 +604,11 @@ And when it finally does, every stone, every storm, and every pause in progress 
       image: Clarity,
       title: "Clarity in Branches",
       editions: "3/3 Available",
-      price: "₦85,000",
-      size: "16x20 inches",
-      category: "urban",
+     sizes: [
+        { size: "18x24 inches", price: "₦240,000" },
+        { size: "24x36 inches", price: "₦340,000" },
+      ],
+      category: "Collector’s Elite",
       description: "A lone figure navigates the urban expanse, a study in scale and solitude.",
       story: `The tree in this image is the Flamboyant tree graceful, wide-armed, with feathery leaves and long seed pods swaying from its branches. In full bloom, it explodes in fiery reds and oranges, but even bare, it carries a quiet presence, a reminder of how beauty lives in many forms.
 
@@ -561,10 +633,12 @@ And in that moment, you realize: the knots of your thoughts are not barriers, th
     {
       image: Mirror,
       title: "Mirror on Sand",
-      editions: "3/3 Available",
-      price: "₦78,000",
-      size: "18x24 inches",
-      category: "abstract",
+      editions: "9/9 Available",
+     sizes: [
+        { size: "18x24 inches", price: "₦130,000" },
+        { size: "40x30 inches", price: "₦195,000" },
+      ],
+      category: "Signature Edition",
       description: "An abstract exploration of texture and form, where light and shadow create depth and movement.",
       story: `When the tide retreats, it leaves behind more than wet sand. It leaves a canvas. A thin film of water lingers, holding the sky in its embrace. Clouds drift across the ground, soft light rests where footprints once pressed, and the horizon suddenly bends both ways.
 
@@ -590,10 +664,12 @@ The ocean will return, the sand will shift, the sky will change. But for a breat
     {
       image: Echos,
       title: "Echos of Dunes",
-      editions: "3/3 Available",
-      price: "₦95,000",
-      size: "24x36 inches",
-      category: "urban",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦125,000" },
+        { size: "24x36 inches", price: "₦185,000" },
+      ],
+      category: "Signature Edition",
       description: "The vibrant energy of the city at night, captured in a symphony of light and color.",
       story: `In the fading light of Sokoto, a camel walks with its herder slow, deliberate, each step pressing into the earth as if writing its own verse. 
 The weight of the day rests on both: for the camel, the burden of load; for the herder, the burden of life. Yet together, they move forward, not in opposition but in rhythm.
@@ -619,12 +695,14 @@ In their path is written a truth: tranquility is not the absence of struggle, bu
     {
       image: Bombom,
       title: "The Journey of Bombom",
-      editions: "3/3 Available",
-      price: "₦82,000",
-      size: "20x30 inches",
-      category: "cultural",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦155,000" },
+        { size: "24x36 inches", price: "₦230,000" },
+      ],
+      category: "Signature Edition",
       description: "A powerful exploration of cultural heritage and identity through symbolic imagery.",
-      story: `From childhood in Lagos, I knew the Ewe Bombom. Its balloon-like pods fascinated us we pressed them until they burst with milky sap. Elders often warned us, calling it both medicine and mystery.
+      story: `From childhood in Lagos, I knew the Ewe Bombom. Its balloon-like pods fascinated us we pressed them until they burst with
 
 To me, it belonged to the South, swaying along coastal roadsides, scattered across open fields in the Lagos breeze. It was part of my youth, so familiar I never imagined it elsewhere.
 
@@ -648,10 +726,12 @@ Like the Nigerian spirit, it endures across regions, weathered yet unbroken, alw
     {
       image: LifeBalance,
       title: "Life No Balance",
-      editions: "3/3 Available",
-      price: "₦88,000",
-      size: "24x36 inches",
-      category: "urban",
+      editions: "9/9 Available",
+     sizes: [
+        { size: "18x24 inches", price: "₦130,000" },
+        { size: "24x36 inches", price: "₦190,000" },
+      ],
+      category: "Signature Edition",
       description: "A dynamic composition capturing the pulse of urban life through movement and color.",
       story: `High tension wires stretch across the sky, carrying power from one point to another. Some tap from Band A, where light almost never blinks. Others are on Band B or Band C, where the current comes and goes. The feeders spread electricity to every household, yet some homes shine bright while others sit in darkness. 
 
@@ -673,10 +753,12 @@ In the end, the lines in the sky remind us that everyone is wired differently. W
     {
       image: WhenTrees,
       title: "When Trees Meet the Sky",
-      editions: "2/3 Available",
-      price: "₦90,000",
-      size: "20x30 inches",
-      category: "abstract",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦135,000" },
+        { size: "24x36 inches", price: "₦200,000" },
+      ],
+      category: "Signature Edition",
       description: "A study in light and form, where subtle gradients create a sense of depth and movement.",
       story: `In this picture, the tree stretches its branches upward, and the clouds drift gently across the blue sky. At first glance, they are different worlds one rooted in the earth, the other floating above. Yet in this moment, they connect.
 
@@ -699,10 +781,12 @@ My only advice is this: when you connect, leave a good pact in the lives of thos
     {
       image: IYANAPAJA,
       title: "IYANAPAJA - The Sting and  Shelter",
-      editions: "3/3 Available",
-      price: "₦85,000",
-      size: "24x36 inches",
-      category: "landscape",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦130,000" },
+        { size: "24x36 inches", price: "₦190,000" },
+      ],
+      category: "Signature Edition",
       description: "The eternal dance of water and land, captured in a moment of perfect balance.",
       story: `They call it Iyanapaja in the Southwest, a leaf both feared and cherished. In science, it bears the name Jatropha tanjorensis, and in English, it is often known as hospital-too-far. Touch it raw and your skin will prickle with an uninvited itch, a reminder that beauty sometimes guards itself with barbs. But introduce it to fire and water, and it transforms yielding a nourishing green that graces many pots and keeps many bellies full.
 
@@ -726,9 +810,11 @@ The leaf doesn’t apologize for its sting, and neither should we for our comple
       image: Breath,
       title: "Breath of the Arctic Snow",
       editions: "3/3 Available",
-      price: "₦92,000",
-      size: "20x20 inches",
-      category: "abstract",
+      sizes: [
+        { size: "18x24 inches", price: "₦260,000" },
+        { size: "40x30 inches", price: "₦360,000" },
+      ],
+      category: "Collectors' Elite",
       description: "A harmonious composition exploring the beauty of geometric forms and their spiritual significance.",
       story: `At the heart of the green where light plays with shadow, and rain still lingers on tender leaves a single white blossom dares to bloom. This is the Arctic Snow, known in gardens and forests alike for its quiet elegance. Not loud. Not proud. Just present. Just beautiful.
 
@@ -756,9 +842,11 @@ This image doesn’t shout. It breathes.
     {
       image: Petals,
       title: "Mirrored Petals",
-      editions: "1/3 Available",
-      price: "₦95,000",
-      size: "30x20 inches",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦140,000" },
+        { size: "24x36 inches", price: "₦205,000" },
+      ],
       category: "landscape",
       description: "A breathtaking vista where sky and land meet in perfect harmony.",
       story: `On the surface, they are nothing more than artificial decorative petals, fragile in their construction, arranged in colors chosen by design. Yet placed on a mirror, they transform. The reflection beneath them does not simply repeat; it extends, suggesting that even the simplest objects hold worlds within them.
@@ -782,10 +870,12 @@ The mirror does not lie, but it does not shout either. It whispers: look again`,
     {
       image: Fisherman,
       title: "Fisherman’s Thought",
-      editions: "3/3 Available",
-      price: "₦85,000",
-      size: "16x24 inches",
-      category: "conceptual",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦125,000" },
+        { size: "24x36 inches", price: "₦185,000" },
+      ],
+      category: "Signature Edition",
       description: "A poetic exploration of connection and distance between forms.",
       story: `He sits at the edge of the boat, toes brushing the spray, eyes fixed on a horizon that seems endless. The sea moves beneath him, restless and alive, but his stillness tells another story, a story of thought, of waiting, of quiet dialogue between man and water.
 
@@ -809,10 +899,12 @@ In his silence, there is strength. In his gaze, there is hope. The fisherman thi
     {
       image: Fisherman2,
       title: "Fisherman and the Tides",
-      editions: "3/3 Available",
-      price: "₦78,000",
-      size: "18x24 inches",
-      category: "documentary",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦130,000" },
+        { size: "24x36 inches", price: "₦190,000" },
+      ],
+      category: "Signature Edition",
       description: "A vibrant slice of market life, bursting with color and energy.",
       story: `The sea stretches wide, endless and untamed, its surface glittering under the embrace of the sun. To some, it is just water; to these men, it is a living field their farm, their hope, their inheritance.
 The boat, carved with time and weathered by countless journeys, carries more than bodies; it carries stories, laughter, weariness, and faith. Its wooden frame creaks like an elder whispering prayers, steadying itself against the waves.
@@ -834,10 +926,12 @@ Every wave that pushes the boat forward is a hymn, and every man aboard is a ver
     {
       image: Ikare,
       title: "The Ikare Hills",
-      editions: "3/3 Available",
-      price: "₦88,000",
-      size: "24x36 inches",
-      category: "urban",
+      editions: "9/9 Available",
+      sizes: [
+        { size: "18x24 inches", price: "₦135,000" },
+        { size: "24x36 inches", price: "₦200,000" },
+      ],
+      category: "Signature Edition",
       description: "A continuation of the urban exploration series, focusing on architectural patterns.",
       story: `The hills of Ikare rise like timeless guardians, their rugged backs carved by centuries of memory. More than stone, they are the soul of the town silent watchers that shape its weather, its rhythm, and its stories. Each morning, mist rolls down their slopes, carrying a cool breath into the streets, a reminder that life here flows in harmony with the land.
 
@@ -861,9 +955,11 @@ And though the cold air descends from their slopes, it only draws the town close
       image: Gangan,
       title: "Gángan – The Ancient Messenger",
       editions: "3/3 Available",
-      price: "₦92,000",
-      size: "20x30 inches",
-      category: "landscape",
+     sizes: [
+        { size: "18x24 inches", price: "₦250,000" },
+        { size: "24x36 inches", price: "₦350,000" },
+      ],
+      category: "Collector’s Elite",
       description: "A serene seascape that invites quiet reflection and inner peace.",
       story: `It stands in quiet dignity, yet its voice has moved nations.
 This is Gángan, the talking drum, more than an instrument, it is a messenger, a storyteller, and a keeper of memory.
@@ -892,10 +988,12 @@ It is The Ancient Messenger.
     {
       image: Resting,
       title: "Resting Between Journeys",
-      editions: "2/3 Available",
-      price: "₦95,000",
-      size: "24x36 inches",
-      category: "urban",
+      editions: "9/9 Available",
+       sizes: [
+        { size: "18x24 inches", price: "₦135,000" },
+        { size: "24x36 inches", price: "₦200,000" },
+      ],
+      category: "Signature Edition",
       description: "A dreamlike interpretation of urban solitude and connection.",
       story: `The little red boat waits patiently at the dock, its engine silent, its ropes holding it steady against the soft push of the tide. Around it, the water stretches wide, reflecting the weight of the clouds above and the quiet pulse of the community across the shore.
 
@@ -919,13 +1017,8 @@ In this pause, there is a story: one of work and respite, of movement and stilln
 
   const categories = [
     { id: 'all', name: 'All Artworks' },
-    { id: 'urban', name: 'Urban' },
-    { id: 'nature', name: 'Nature' },
-    { id: 'portrait', name: 'Portrait' },
-    { id: 'landscape', name: 'Landscape' },
-    { id: 'architecture', name: 'Architecture' },
-    { id: 'abstract', name: 'Abstract' },
-    { id: 'vintage', name: 'Vintage' }
+    { id: 'Collector’s Elite', name: 'Collector’s Elite' },
+    { id: 'Signature Edition', name: 'Signature Edition' },
   ];
 
   const filteredArtworks = (filterCategory === 'all'
@@ -1060,7 +1153,7 @@ In this pause, there is a story: one of work and respite, of movement and stilln
                     className="w-full h-64 object-cover rounded-lg"
                   />
                   <div className="absolute top-3 left-3 bg-gray-900/80 text-white px-2 py-1 rounded text-xs font-semibold">
-                    {artwork.size}
+                    {artwork.sizes[0].size}
                   </div>
                   <div className="absolute top-3 right-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-semibold">
                     {artwork.editions.includes('1/3') ? 'Last One!' : 'Limited Edition'}
@@ -1074,16 +1167,27 @@ In this pause, there is a story: one of work and respite, of movement and stilln
                   )}
                   <div className="flex justify-between items-center mb-3">
                     <p className="text-gray-400 text-sm">{artwork.editions}</p>
-                    <p className="text-yellow-400 font-medium">{artwork.price}</p>
+                    <div className="text-yellow-400 font-medium">
+                      {artwork.sizes.map((sizeOption, idx) => (
+                        <p key={idx}>{sizeOption.size}: {sizeOption.price}</p>
+                      ))}
+                    </div>
                   </div>
                   <div className="space-y-2">
-                    <button 
-                      onClick={() => onWhatsAppOrder(`Hi! I'm interested in "${artwork.title}" (${artwork.price}). Is this piece still available?`)}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      <span>Order via WhatsApp</span>
-                    </button>
+                    {artwork.sizes.map((sizeOption, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() =>
+                          onWhatsAppOrder(
+                            `Hi! I'm interested in "${artwork.title}" (${sizeOption.size}, ${sizeOption.price}). Is this piece still available?`
+                          )
+                        }
+                        className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        <span>Order {sizeOption.size} via WhatsApp</span>
+                      </button>
+                    ))}
                     <button
                       onClick={() => openModal(artwork)}
                       className="w-full bg-gray-700 hover:bg-gray-600 text-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200"
