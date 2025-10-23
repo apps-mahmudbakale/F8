@@ -10,7 +10,7 @@ import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless 
 import LatoriOlumo2 from "../Frames/LATORI OLUMO- A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
 import Glow from "../Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
 import OceanSpeaks from "../Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
-import Ayanfe from "../Frames/3 of 3 /Ayanfe Arájò (Beloved Sojourner).jpg"; // Replace with your mockup image path
+import Ayanfe from "../Frames/3 of 3 /Ayanfe Arajo (Beloved Sojourner).jpg"; // Replace with your mockup image path
 import Beyond from "../Frames/9 of 9/Beyond the Dying Light.jpg"; // Replace with your mockup image path
 import Companions from "../Frames/9 of 9/Companions by the Sea.jpg"; // Replace with your mockup image path
 import BuyMe from "../Frames/9 of 9/Buy me.jpg"; // Replace with your mockup image path
