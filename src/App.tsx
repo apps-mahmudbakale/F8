@@ -26,6 +26,7 @@ import LatoriOlumo2 from "./Frames/LATORI OLUMO- A Tapestry Of Culture and Conti
 import Glow from "./Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
 import OceanSpeaks from "./Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
 import MockUp89 from "./F8MediaArtsMockUp89.png"; // Replace with your mockup image path
+import BG from "./Frames/IMG_1465.png";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -115,12 +116,11 @@ This is not just fabric. It is structure, it is softness, it is shadow and light
       year: "July 13, 2025",
       location: "Alimosho Lagos State.",
       features: [
-        "Museum-quality archival print",
-        "Premium wooden frame with matting",
-        "Certificate of authenticity",
-        "Artist signature and edition number",
-        "Professional packaging for shipping",
-        "Care instructions included",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -148,12 +148,11 @@ Thank you for collecting this piece.
       year: " Nov 12, 2023",
       location: "Takwabay, Lagos,State.",
       features: [
-        "Giclée print on premium paper",
-        "Hand-selected frame with conservation matting",
-        "UV-protective glass",
-        "Signed certificate of authenticity",
-        "Archival quality guaranteed for 100+ years",
-        "Custom packaging with care instructions",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -182,12 +181,11 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       year: "Nov 12, 2023",
       location: "Takwabay, Lagos,State",
       features: [
-        "Large format museum print",
-        "Premium hardwood frame with gold accents",
-        "Museum-grade matting",
-        "Certificate with detailed provenance",
-        "Artist's personal note about the piece",
-        "White-glove delivery service available",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
      {
@@ -462,7 +460,7 @@ Growth is not always about building upward, sometimes it is about learning how t
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              'url("https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
+              `url(${BG})`,
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         />

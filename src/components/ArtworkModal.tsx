@@ -23,8 +23,6 @@ interface ArtworkModalProps {
 const ArtworkModal: React.FC<ArtworkModalProps> = ({ artwork, isOpen, onClose, onWhatsAppOrder }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   
-  if (!isOpen || !artwork) return null;
-
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -45,6 +43,11 @@ const ArtworkModal: React.FC<ArtworkModalProps> = ({ artwork, isOpen, onClose, o
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFullscreen]);
+  
+  // Early return after all hooks
+  if (!isOpen || !artwork) {
+    return null;
+  }
 
   return (
     <div 

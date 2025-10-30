@@ -6,8 +6,8 @@ import WatchShore from "../Frames/3 of 3 /THE WATCHFUL SHORE.jpg"; // Replace wi
 import SoloWalker from "../Frames/3 of 3 /SOLO WALKER.jpg"; // Replace with your mockup image path
 import Foot from "../Frames/3 of 3 /Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
 import BroadStreet from "../Frames/9 of 9/BROAD STREET.jpg"; // Replace with your mockup image path
-import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless Possiblilities .jpg.jpg"; // Replace with your mockup image path
-import LatoriOlumo2 from "../Frames/LATORI OLUMO- A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
+import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg";
+import LatoriOlumo2 from "../Frames/9 of 9/LATORI OLUMO.jpg"; // Replace with your mockup image path
 import Glow from "../Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
 import OceanSpeaks from "../Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
 import Ayanfe from "../Frames/3 of 3 /Ayanfe Arajo (Beloved Sojourner).jpg"; // Replace with your mockup image path
@@ -86,12 +86,11 @@ This is not just fabric. It is structure, it is softness, it is shadow and light
       year: "July 13, 2025",
       location: "Alimosho Lagos State.",
       features: [
-        "Museum-quality archival print",
-        "Premium wooden frame with matting",
-        "Certificate of authenticity",
-        "Artist signature and edition number",
-        "Professional packaging for shipping",
-        "Care instructions included",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -119,12 +118,11 @@ Thank you for collecting this piece.
       year: " Nov 12, 2023",
       location: "Takwabay, Lagos,State.",
       features: [
-        "Giclée print on premium paper",
-        "Hand-selected frame with conservation matting",
-        "UV-protective glass",
-        "Signed certificate of authenticity",
-        "Archival quality guaranteed for 100+ years",
-        "Custom packaging with care instructions",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -153,12 +151,11 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       year: "Nov 12, 2023",
       location: "Takwabay, Lagos,State",
       features: [
-        "Large format museum print",
-        "Premium hardwood frame with gold accents",
-        "Museum-grade matting",
-        "Certificate with detailed provenance",
-        "Artist's personal note about the piece",
-        "White-glove delivery service available",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
