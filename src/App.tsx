@@ -16,7 +16,7 @@ import {
 import CollectionsPage from "./components/CollectionsPage";
 import ArtworkModal from "./components/ArtworkModal";
 import logo from "./logo.png"; // Replace with your logo path
-import VeinsOfLight from "./Frames/3 of 3 /Between the viens of Light.jpg"; // Replace with your mockup image path
+import VeinsOfLight from "./Frames/3 of 3 /Between the Veins of Light.jpg"; // Replace with your mockup image path
 import WatchShore from "./Frames/3 of 3 /THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
 import SoloWalker from "./Frames/3 of 3 /SOLO WALKER.jpg"; // Replace with your mockup image path
 import Foot from "./Frames/3 of 3 /Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path

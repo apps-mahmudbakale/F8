@@ -1,16 +1,16 @@
 import React, { useState, useMemo } from 'react';
 import { ArrowLeft, MessageCircle, Filter, Grid, List } from 'lucide-react';
 import ArtworkModal from './ArtworkModal';
-import VeinsOfLight from "../Frames/3 of 3 /Between the viens of Light.jpg"; // Replace with your mockup image path
+import VeinsOfLight from "../Frames/3 of 3 /Between the Veins of Light.jpg"; // Replace with your mockup image path
 import WatchShore from "../Frames/3 of 3 /THE WATCHFUL SHORE.jpg"; // Replace with your mockup image path
 import SoloWalker from "../Frames/3 of 3 /SOLO WALKER.jpg"; // Replace with your mockup image path
 import Foot from "../Frames/3 of 3 /Foot Print Beneath the Gazebo.jpg"; // Replace with your mockup image path
 import BroadStreet from "../Frames/9 of 9/BROAD STREET.jpg"; // Replace with your mockup image path
 import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless Possiblilities.jpg";
-import LatoriOlumo2 from "../Frames/9 of 9/LATORI OLUMO.jpg"; // Replace with your mockup image path
+import LatoriOlumo2 from "../Frames/9 of 9/LATORI OLUMO - A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
 import Glow from "../Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
 import OceanSpeaks from "../Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
-import Ayanfe from "../Frames/3 of 3 /Ayanfe Arajo (Beloved Sojourner).jpg"; // Replace with your mockup image path
+import Ayanfe from "../Frames/3 of 3 /Ayanfe Arájò (Beloved Sojourner).jpg"; // Replace with your mockup image path
 import Beyond from "../Frames/9 of 9/Beyond the Dying Light.jpg"; // Replace with your mockup image path
 import Companions from "../Frames/9 of 9/Companions by the Sea.jpg"; // Replace with your mockup image path
 import BuyMe from "../Frames/9 of 9/Buy me.jpg"; // Replace with your mockup image path
@@ -25,11 +25,11 @@ import Clarity from "../Frames/3 of 3 /Clarity in Branches.jpg"; // Replace with
 import Mirror from "../Frames/9 of 9/SAND AND THE BEACH 2.jpg"; // Replace with your mockup image path 
 import Petals from "../Frames/9 of 9/Mirrored Petals.jpg"; // Replace with your mockup image path 
 import Bombom from "../Frames/9 of 9/The Journey of Bombom.jpg"; // Replace with your mockup image path 
-import LifeBalance from "../Frames/9 of 9/Life No Balance- POWER LINE.jpg.jpg"; // Replace with your mockup image path 
+import LifeBalance from "../Frames/9 of 9/Life No Balance- POWER LINE.jpg"; // Replace with your mockup image path 
 import WhenTrees from "../Frames/9 of 9/When Trees Meet the Sky.jpg"; // Replace with your mockup image path 
 import IYANAPAJA from "../Frames/9 of 9/The Sting and the Shelter.jpg"; // Replace with your mockup image path 
 import Breath from "../Frames/3 of 3 /Breath of the Arctic Snow.jpg"; // Replace with your mockup image path 
-import Ikare from "../Frames/9 of 9/The Ikare Hills.jpg.jpg"; // Replace with your mockup image path 
+import Ikare from "../Frames/9 of 9/The Ikare Hills.jpg"; // Replace with your mockup image path 
 import Ikoyi from "../Frames/3 of 3 /Ikoyi Link Bridge.jpg";
 
 
