@@ -198,8 +198,8 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       editions: "9/9 Available",
       price: "₦145,000",
       sizes: [
-        { size: "18x24 inches", price: "₦145,000" },
-        { size: "24x36 inches", price: "₦210,000" },
+        { size: "18x24 inches", price: "₦185,000" },
+        { size: "24x36 inches", price: "₦260,000" },
       ],
       category: "Signature Edition",
       description:
@@ -219,13 +219,12 @@ This is Broad Street.
       technique: "Landscape Photography",
       year: "Dec. 28, 2022",
       location: "Lagos,State",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -234,8 +233,8 @@ This is Broad Street.
       editions: "9/9 Available",
       price: "₦145,000",
       sizes: [
-        { size: "18x24 inches", price: "₦145,000" },
-        { size: "24x36 inches", price: "₦210,000" },
+        { size: "18x24 inches", price: "₦185,000" },
+        { size: "24x36 inches", price: "₦260,000" },
       ],
       category: "Signature Edition",
       description:
@@ -256,13 +255,12 @@ What you see... is us.
       technique: "Landscape Photography",
       year: "Oct 12, 2024",
       location: " Abeokuta, Ogun State",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -271,8 +269,8 @@ What you see... is us.
       editions: "9/9 Available",
       price: "₦150,000",
       sizes: [
-        { size: "18x24 inches", price: "₦150,000" },
-        { size: "24x36 inches", price: "₦220,000" },
+        { size: "18x24 inches", price: "₦190,000" },
+        { size: "24x36 inches", price: "₦270,000" },
       ],
       category: "Signature Edition",
       description:
@@ -294,13 +292,12 @@ This, too, is Latori Olumo.
       technique: "Landscape Photography",
       year: "Oct 12, 2024",
       location: " Abeokuta, Ogun St",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -309,8 +306,8 @@ This, too, is Latori Olumo.
       editions: "9/9 Available",
       price: "₦120,000",
       sizes: [
-        { size: "18x24 inches", price: "₦120,000" },
-        { size: "24x36 inches", price: "₦180,000" },
+        { size: "18x24 inches", price: "₦160,000" },
+        { size: "24x36 inches", price: "₦230,000" },
       ],
       category: "Signature Edition",
       description:
@@ -327,12 +324,11 @@ For in the great turning of day into night, we see the quiet heroism of letting 
       year: "Nov 19, 2024",
       location: "Alimosho Lagos State",
       features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -341,8 +337,8 @@ For in the great turning of day into night, we see the quiet heroism of letting 
       editions: "9/9 Available",
       price: "₦140,000",
       sizes: [
-        { size: "18x24 inches", price: "₦140,000" },
-        { size: "24x36 inches", price: "₦205,000" },
+        { size: "18x24 inches", price: "₦180,000" },
+        { size: "24x36 inches", price: "₦255,000" },
       ],
       category: "Signature Edition",
       description:
@@ -359,12 +355,11 @@ Growth is not always about building upward, sometimes it is about learning how t
       year: "Nov 25, 2023",
       location: "Amuwo-Odofin, Lagos",
       features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -406,8 +401,8 @@ Thus, Ayanfe Arájò is more than a crawler on the earth, it is a metaphor of ex
       editions: "9/9 Available",
       price: "₦140,000",
       sizes: [
-        { size: "18x24 inches", price: "₦140,000" },
-        { size: "24x36 inches", price: "₦205,000" },
+        { size: "18x24 inches", price: "₦180,000" },
+        { size: "24x36 inches", price: "₦255,000" },
       ],
       category: "Signature Edition",
       description:
@@ -423,13 +418,12 @@ As shadows deepened, I realized the sunset was more than beauty it was a mirror.
       technique: "Landscape Photography",
       year: "Oct 03, 2023",
       location: "Alimosho Lagos State",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -438,8 +432,8 @@ As shadows deepened, I realized the sunset was more than beauty it was a mirror.
       editions: "9/9 Available",
       price: "₦145,000",
       sizes: [
-        { size: "18x24 inches", price: "₦145,000" },
-        { size: "24x36 inches", price: "₦210,000" },
+        { size: "18x24 inches", price: "₦185,000" },
+        { size: "24x36 inches", price: "₦260,000" },
       ],
       category: "Sunset In My Pent",
       description:
@@ -461,12 +455,11 @@ For in companionship, as in the sea, there was a truth unshaken: life is lighter
       year: "Nov 10, 2024",
       location: " Ibeju Lekki",
       features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -475,8 +468,8 @@ For in companionship, as in the sea, there was a truth unshaken: life is lighter
       editions: "9/9 Available",
       price: "₦125,000",
       sizes: [
-        { size: "18x24 inches", price: "₦125,000" },
-        { size: "24x36 inches", price: "₦185,000" },
+        { size: "18x24 inches", price: "₦165,000" },
+        { size: "24x36 inches", price: "₦230,000" },
       ],
       category: "Signature Edition",
       description:
@@ -497,13 +490,12 @@ BUY ME`,
       technique: "Landscape Photography",
       year: "Jan 10, 2025",
       location: "Oke-Bola Ibadan",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -573,8 +565,8 @@ Beyond its daily function, the Ikoyi Link Bridge also stands as a symbol of Lago
       editions: "9/9 Available",
       price: "₦135,000",
       sizes: [
-        { size: "18x24 inches", price: "₦135,000" },
-        { size: "24x36 inches", price: "₦200,000" },
+        { size: "18x24 inches", price: "₦175,000" },
+        { size: "24x36 inches", price: "₦250,000" },
       ],
       category: "Signature Edition",
       description: "A serene coastal scene where sky meets sea in perfect harmony, capturing a moment of quiet reflection.",
@@ -590,11 +582,12 @@ And when it finally does, every stone, every storm, and every pause in progress 
       technique: "Long Exposure Photography",
       year: "Aug 12, 2023",
       location: "Eti-Osa Lagos State",
-      features: [
-        "Limited edition of 3",
-        "Museum-quality print",
-        "Signed by the artist",
-        "Includes story card"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -632,8 +625,8 @@ And in that moment, you realize: the knots of your thoughts are not barriers, th
       title: "Mirror on Sand",
       editions: "9/9 Available",
      sizes: [
-        { size: "18x24 inches", price: "₦130,000" },
-        { size: "40x30 inches", price: "₦195,000" },
+        { size: "18x24 inches", price: "₦170,000" },
+        { size: "40x30 inches", price: "₦240,000" },
       ],
       category: "Signature Edition",
       description: "An abstract exploration of texture and form, where light and shadow create depth and movement.",
@@ -651,20 +644,21 @@ The ocean will return, the sand will shift, the sky will change. But for a breat
       technique: "Experimental Photography",
       year: "Nov 12, 2023",
       location: "Amuwo-Odofin Lagos",
-      features: [
-        "Limited edition of 3",
-        "Archival quality print",
-        "Hand-signed by artist",
-        "Comes with certificate"
-      ],
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
+      ]
     },
     {
       image: Echos,
       title: "Echos of Dunes",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦125,000" },
-        { size: "24x36 inches", price: "₦185,000" },
+        { size: "18x24 inches", price: "₦165,000" },
+        { size: "24x36 inches", price: "₦235,000" },
       ],
       category: "Signature Edition",
       description: "The vibrant energy of the city at night, captured in a symphony of light and color.",
@@ -682,11 +676,12 @@ In their path is written a truth: tranquility is not the absence of struggle, bu
       technique: "Night Photography",
       year: "March 11, 2023",
       location: "Rumjin Sambo Federal Housing Estate, Sokoto",
-      features: [
-        "Limited edition of 3",
-        "Premium metal print",
-        "Signed and numbered",
-        "Includes artist's notes"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -694,8 +689,8 @@ In their path is written a truth: tranquility is not the absence of struggle, bu
       title: "The Journey of Bombom",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦155,000" },
-        { size: "24x36 inches", price: "₦230,000" },
+        { size: "18x24 inches", price: "₦170,000" },
+        { size: "24x36 inches", price: "₦240,000" },
       ],
       category: "Signature Edition",
       description: "A powerful exploration of cultural heritage and identity through symbolic imagery.",
@@ -713,11 +708,12 @@ Like the Nigerian spirit, it endures across regions, weathered yet unbroken, alw
       technique: "Digital Art",
       year: "March 14, 2019",
       location: "Rumjin Sambo Federal Housing Estate, Sokoto",
-      features: [
-        "Limited edition of 3",
-        "Archival pigment print",
-        "Hand-signed",
-        "Includes cultural notes"
+        features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -725,8 +721,8 @@ Like the Nigerian spirit, it endures across regions, weathered yet unbroken, alw
       title: "Life No Balance",
       editions: "9/9 Available",
      sizes: [
-        { size: "18x24 inches", price: "₦130,000" },
-        { size: "24x36 inches", price: "₦190,000" },
+        { size: "18x24 inches", price: "₦170,000" },
+        { size: "24x36 inches", price: "₦240,000" },
       ],
       category: "Signature Edition",
       description: "A dynamic composition capturing the pulse of urban life through movement and color.",
@@ -740,11 +736,12 @@ In the end, the lines in the sky remind us that everyone is wired differently. W
       technique: "Long Exposure",
       year: "April 11, 2022",
       location: "Tomi Williams Str. Alimosho Lagos",
-      features: [
-        "Limited edition of 3",
-        "Premium fine art paper",
-        "Signed and numbered",
-        "Includes artist statement"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -768,11 +765,12 @@ My only advice is this: when you connect, leave a good pact in the lives of thos
       technique: "Digital Art",
       year: "Apr 15, 2022",
       location: "Lead City Uni Ibadan",
-      features: [
-        "Limited edition of 3",
-        "Museum-quality print",
-        "Hand-signed",
-        "Includes artist notes"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -780,8 +778,8 @@ My only advice is this: when you connect, leave a good pact in the lives of thos
       title: "IYANAPAJA - The Sting and  Shelter",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦130,000" },
-        { size: "24x36 inches", price: "₦190,000" },
+        { size: "18x24 inches", price: "₦170,000" },
+        { size: "24x36 inches", price: "₦245,000" },
       ],
       category: "Signature Edition",
       description: "The eternal dance of water and land, captured in a moment of perfect balance.",
@@ -796,11 +794,12 @@ The leaf doesn’t apologize for its sting, and neither should we for our comple
       technique: "Long Exposure Photography",
       year: "May 19, 2021",
       location: "Graceland Estate Alimosho Lagos",
-      features: [
-        "Limited edition of 3",
-        "Archival quality print",
-        "Signed and numbered",
-        "Comes with story card"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -841,8 +840,8 @@ This image doesn’t shout. It breathes.
       title: "Mirrored Petals",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦140,000" },
-        { size: "24x36 inches", price: "₦205,000" },
+        { size: "18x24 inches", price: "₦180,000" },
+        { size: "24x36 inches", price: "₦255,000" },
       ],
       category: "landscape",
       description: "A breathtaking vista where sky and land meet in perfect harmony.",
@@ -858,10 +857,11 @@ The mirror does not lie, but it does not shout either. It whispers: look again`,
       year: "Sep 1, 2021",
       location: "Graceland Estate Alimosho Lagos",
       features: [
-        "Limited edition of 3",
-        "Museum-quality print",
-        "Signed and numbered",
-        "Includes location notes"
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -869,8 +869,8 @@ The mirror does not lie, but it does not shout either. It whispers: look again`,
       title: "Fisherman’s Thought",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦125,000" },
-        { size: "24x36 inches", price: "₦185,000" },
+        { size: "18x24 inches", price: "₦165,000" },
+        { size: "24x36 inches", price: "₦230,000" },
       ],
       category: "Signature Edition",
       description: "A poetic exploration of connection and distance between forms.",
@@ -887,10 +887,11 @@ In his silence, there is strength. In his gaze, there is hope. The fisherman thi
       year: "Nov 23, 2023",
       location: "Ajara River Lagos",
       features: [
-        "Limited edition of 3",
-        "Archival pigment print",
-        "Hand-signed",
-        "Includes artist statement"
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -898,8 +899,8 @@ In his silence, there is strength. In his gaze, there is hope. The fisherman thi
       title: "Fisherman and the Tides",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦130,000" },
-        { size: "24x36 inches", price: "₦190,000" },
+        { size: "18x24 inches", price: "₦170,000" },
+        { size: "24x36 inches", price: "₦240,000" },
       ],
       category: "Signature Edition",
       description: "A vibrant slice of market life, bursting with color and energy.",
@@ -913,11 +914,12 @@ Every wave that pushes the boat forward is a hymn, and every man aboard is a ver
       technique: "Street Photography",
       year: "Nov 23, 2023",
       location: "Ajara River Lagos",
-      features: [
-        "Limited edition of 3",
-        "Fine art print",
-        "Signed by artist",
-        "Includes location notes"
+     features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -925,8 +927,8 @@ Every wave that pushes the boat forward is a hymn, and every man aboard is a ver
       title: "The Ikare Hills",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦135,000" },
-        { size: "24x36 inches", price: "₦200,000" },
+        { size: "18x24 inches", price: "₦175,000" },
+        { size: "24x36 inches", price: "₦2405,000" },
       ],
       category: "Signature Edition",
       description: "A continuation of the urban exploration series, focusing on architectural patterns.",
@@ -941,11 +943,12 @@ And though the cold air descends from their slopes, it only draws the town close
       technique: "Digital Composite",
       year: "Aug 5, 2023",
       location: "Ikare Akoko, Ondo State",
-      features: [
-        "Limited edition of 3",
-        "Archival quality print",
-        "Hand-signed and numbered",
-        "Includes artist notes"
+       features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
     {
@@ -987,8 +990,8 @@ It is The Ancient Messenger.
       title: "Resting Between Journeys",
       editions: "9/9 Available",
        sizes: [
-        { size: "18x24 inches", price: "₦135,000" },
-        { size: "24x36 inches", price: "₦200,000" },
+        { size: "18x24 inches", price: "₦175,000" },
+        { size: "24x36 inches", price: "₦250,000" },
       ],
       category: "Signature Edition",
       description: "A dreamlike interpretation of urban solitude and connection.",
@@ -1003,11 +1006,12 @@ In this pause, there is a story: one of work and respite, of movement and stilln
       technique: "Digital Art",
       year: "Jul 25, 2023",
       location: "Ajara River Lagos",
-      features: [
-        "Limited edition of 3",
-        "Premium fine art paper",
-        "Hand-signed and numbered",
-        "Includes artist statement"
+     features: [
+       "Limited Edition of 9 (Signature Series) — A curated collection offering wider access while preserving exclusivity.",
+	     "Hand-Signed & Certified by the artist.",
+	     "Includes Certificate of Authenticity & Story Card that shares the story and inspiration behind the art.",
+	     "Delivered in Premium Frame, Ready for Display — secured with custom wrapping and authenticity seal.",
+	     "Worldwide Shipping with careful packaging for safe delivery.",
       ],
     },
   ];
