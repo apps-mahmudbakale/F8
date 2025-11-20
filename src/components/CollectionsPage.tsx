@@ -10,7 +10,7 @@ import LatoriOlumo from "../Frames/9 of 9/LATORI OLUMO- A Land Scape of Endless 
 import LatoriOlumo2 from "../Frames/9 of 9/LATORI OLUMO - A Tapestry Of Culture and Continuity.jpg"; // Replace with your mockup image path
 import Glow from "../Frames/9 of 9/THE GLOW THAT GIVES WAY.jpg"; // Replace with your mockup image path
 import OceanSpeaks from "../Frames/9 of 9/Ocean Speaks.jpg"; // Replace with your mockup image path
-import Ayanfe from "../Frames/3 of 3 /Ayanfe Arájò (Beloved Sojourner).jpg"; // Replace with your mockup image path
+import Ayanfe from "../Frames/3 of 3 /Ayanfe Arajo (Beloved Sojourner).jpg";
 import Beyond from "../Frames/9 of 9/Beyond the Dying Light.jpg"; // Replace with your mockup image path
 import Companions from "../Frames/9 of 9/Companions by the Sea.jpg"; // Replace with your mockup image path
 import BuyMe from "../Frames/9 of 9/Buy me.jpg"; // Replace with your mockup image path
@@ -184,12 +184,11 @@ This artwork is for the seeker. The grounded dreamer. The person who knows that 
       year: "July 13, 2025",
       location: "Ibese, Lagos,State.",
       features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -386,13 +385,12 @@ Thus, Ayanfe Arájò is more than a crawler on the earth, it is a metaphor of ex
       technique: "Landscape Photography",
       year: "Apr 25, 2019",
       location: "Osun State",
-      features: [
-        "High-quality photographic print",
-        "Classic wooden frame with natural finish",
-        "Acid-free matting",
-        "Signed and numbered by artist",
-        "Protective packaging",
-        "Digital certificate of authenticity",
+       features: [
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -522,11 +520,12 @@ We move, we leave, we arrive and still, the tide carries us forward.
       technique: "Digital Composite",
       year: "November 23, 2023",
       location: "Takwabay, Lagos,State",
-      features: [
-        "Limited edition of 3",
-        "Archival pigment print",
-        "Hand-signed and numbered",
-        "Includes authentication certificate"
+       features: [
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -553,10 +552,11 @@ Beyond its daily function, the Ikoyi Link Bridge also stands as a symbol of Lago
       year: "November 10, 2024",
       location: "Ikoyi Link Bridge, Eti- Osa Lagos State",
       features: [
-        "Limited edition of 3",
-        "Archival pigment print",
-        "Hand-signed and numbered",
-        "Includes authentication certificate"
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -614,10 +614,11 @@ And in that moment, you realize: the knots of your thoughts are not barriers, th
       year: "Jan 2, 2023",
       location: "Idimu -Ikotun Road Lagos",
       features: [
-        "Limited edition of 3",
-        "Fine art print",
-        "Signed and numbered",
-        "Includes artist statement"
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -828,11 +829,12 @@ This image doesn’t shout. It breathes.
       technique: "Digital Art",
       year: "Jun 09, 2021",
       location: "Yaba Lagos",
-      features: [
-        "Limited edition of 3",
-        "Premium fine art paper",
-        "Hand-signed by artist",
-        "Includes cultural notes"
+       features: [
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
@@ -978,11 +980,12 @@ It is The Ancient Messenger.
       technique: "Long Exposure Photography",
       year: "Jan 26, 2025",
       location: "J-Randle Lagos Island",
-      features: [
-        "Limited edition of 3",
-        "Museum-quality print",
-        "Signed by artist",
-        "Includes location details"
+       features: [
+        "Limited Edition of 3 (Master Collector's Release) - Only three prints will ever exist, making this the rarest and most exclusive tier.",
+        "Individually Hand-Signed & Numbered by the artist.",
+        "Includes Certificate of Authenticity & Story Card detailing the inspiration and meaning behind the artwork.",
+        "Delivered in Premium Frame with Elite Packaging — featuring custom wrapping and authenticity seal.",
+        "Worldwide Shipping with priority handling for collectors"
       ],
     },
     {
