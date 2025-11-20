@@ -335,8 +335,8 @@ This, too, is Latori Olumo.
       editions: "9/9 Available",
       price: "₦120,000",
       sizes: [
-        { size: "18x24 inches", price: "₦120,000" },
-        { size: "24x36 inches", price: "₦180,000" },
+        { size: "18x24 inches", price: "₦160,000" },
+        { size: "24x36 inches", price: "₦230,000" },
       ],
       category: "Signature Edition",
       description:
