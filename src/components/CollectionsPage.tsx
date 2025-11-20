@@ -750,8 +750,8 @@ In the end, the lines in the sky remind us that everyone is wired differently. W
       title: "When Trees Meet the Sky",
       editions: "9/9 Available",
       sizes: [
-        { size: "18x24 inches", price: "₦135,000" },
-        { size: "24x36 inches", price: "₦200,000" },
+        { size: "18x24 inches", price: "₦185,000" },
+        { size: "24x36 inches", price: "₦255,000" },
       ],
       category: "Signature Edition",
       description: "A study in light and form, where subtle gradients create a sense of depth and movement.",
